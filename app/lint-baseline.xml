@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.6.0" type="baseline" client="gradle" dependencies="false" name="AGP (8.6.0)" variant="all" version="8.6.0">
+
+    <issue
+        id="OldTargetApi"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details."
+        errorLine1="        targetSdkVersion 34"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose:compose-bom than 2024.08.00 is available: 2024.09.00"
+        errorLine1="    implementation platform(&apos;androidx.compose:compose-bom:2024.08.00&apos;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="86"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose.material:material-icons-extended-desktop than 1.6.8 is available: 1.7.0"
+        errorLine1="    implementation &apos;androidx.compose.material:material-icons-extended-desktop:1.6.8&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="89"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-compose than 1.9.1 is available: 1.9.2"
+        errorLine1="    implementation &apos;androidx.activity:activity-compose:1.9.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="95"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-ktx than 1.9.1 is available: 1.9.2"
+        errorLine1="    implementation &apos;androidx.activity:activity-ktx:1.9.1&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="96"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-compose than 2.7.7 is available: 2.8.0"
+        errorLine1="    implementation &apos;androidx.navigation:navigation-compose:2.7.7&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="102"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.emoji2:emoji2-emojipicker than 1.4.0 is available: 1.5.0"
+        errorLine1="    implementation &quot;androidx.emoji2:emoji2-emojipicker:1.4.0&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="105"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;dracula&quot; is not translated in &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;dracula&quot;>Dracula&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="13"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;twilight&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;twilight&quot;>Twilight&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="14"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;high_contrast&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;high_contrast&quot;>High Contrast&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="15"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;high_contrast_colorful&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;high_contrast_colorful&quot;>High Contrast Colorful&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="16"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;ancom&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;ancom&quot;>Anarcho-Communist colors&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="17"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;behavior&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;da&quot; (Danish)"
+        errorLine1="    &lt;string name=&quot;behavior&quot;>Behavior&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;vibrate_warning&quot; is not translated in &quot;de&quot; (German) or &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;vibrate_warning&quot;>Requires touch feedback to be enabled in system settings&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="42"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_non_square&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;da&quot; (Danish), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;key_non_square&quot;>Use Non-Square Keys&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="46"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_height&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;da&quot; (Danish), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;key_height&quot;>Key Height: %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_width&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;da&quot; (Danish), &quot;es&quot; (Spanish)"
+        errorLine1="    &lt;string name=&quot;key_width&quot;>Key Width: %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;slide_enable&quot; is not translated in &quot;de&quot; (German) or &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;slide_enable&quot;>Slide gestures&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="53"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;slide_cursor_movement_mode&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;slide_cursor_movement_mode&quot;>Cursor movement mode&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="54"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;slide_sensitivity&quot; is not translated in &quot;de&quot; (German) or &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;slide_sensitivity&quot;>Slide sensitivity: %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;slide_cursor_acceleration_constant&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;slide_cursor_acceleration_constant&quot;>No acceleration / Constant speed&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;slide_cursor_acceleration_linear&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;slide_cursor_acceleration_linear&quot;>Linear acceleration&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="57"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;slide_cursor_acceleration_quadratic&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;slide_cursor_acceleration_quadratic&quot;>Quadratic acceleration&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="58"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;slide_cursor_acceleration_threshold_acceleration&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;slide_cursor_acceleration_threshold_acceleration&quot;>Threshold acceleration&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="59"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;slide_spacebar_deadzone_enable&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;slide_spacebar_deadzone_enable&quot;>Spacebar: Allow normal swipes to work with slide gestures&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="60"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;slide_backspace_deadzone_enable&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;slide_backspace_deadzone_enable&quot;>Backspace: Allow normal swipes to work with slide gestures&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;reset_to_defaults_msg&quot; is not translated in &quot;de&quot; (German) or &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;reset_to_defaults_msg&quot;>Are you sure you want to reset settings to defaults?&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;reset_to_defaults_confirm&quot; is not translated in &quot;de&quot; (German) or &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;reset_to_defaults_confirm&quot;>Reset&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="64"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;cancel&quot; is not translated in &quot;de&quot; (German) or &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;cancel&quot;>Cancel&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;copy&quot; is not translated in &quot;de&quot; (German) or &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;copy&quot;>Copied Selected Text&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="73"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;hide_symbols&quot; is not translated in &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;hide_symbols&quot;>Hide Symbols&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="75"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;done&quot; is not translated in &quot;de&quot; (German) or &quot;bg&quot; (Bulgarian)"
+        errorLine1="    &lt;string name=&quot;done&quot;>Done&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="77"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;backdrop&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;backdrop&quot;>Keyboard Backdrop&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="78"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_padding&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;key_padding&quot;>Key Padding: %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="79"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_border_width&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;key_border_width&quot;>Key Border Width: %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;key_radius&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian)"
+        errorLine1="    &lt;string name=&quot;key_radius&quot;>Key Radius: %1$s&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="81"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;drag_return_enable&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;drag_return_enable&quot;>Drag-and-Return&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="82"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;counterclockwise_drag_action&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;counterclockwise_drag_action&quot;>Counterclockwise drag action&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="83"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;clockwise_drag_action&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;clockwise_drag_action&quot;>Clockwise drag action&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="84"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;send_oppsite_case&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;send_oppsite_case&quot;>Opposite case letter&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="85"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;send_numeric&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;send_numeric&quot;>Number key&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="86"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;circular_drag_enable&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;circular_drag_enable&quot;>Circular drag&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="87"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;ghost_keys_enable&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;ghost_keys_enable&quot;>Ghost keys&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="88"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;ghost_keys_description&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;ghost_keys_description&quot;>Access hidden symbol keys without switching to numeric view&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="89"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        message="Inconsistent number of arguments in formatting string `key_padding`; found both 0 here and 1 in values/strings.xml"
+        errorLine1="    &lt;string name=&quot;key_padding&quot;>按键填充&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-zh-rCN/strings.xml"
+            line="80"
+            column="5"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="79"
+            column="5"
+            message="Conflicting number of arguments (1) here"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        message="Inconsistent number of arguments in formatting string `key_border_width`; found both 0 here and 1 in values/strings.xml"
+        errorLine1="    &lt;string name=&quot;key_border_width&quot;>按键边缘厚度&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-zh-rCN/strings.xml"
+            line="81"
+            column="5"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="80"
+            column="5"
+            message="Conflicting number of arguments (1) here"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        message="Inconsistent number of arguments in formatting string `key_radius`; found both 0 here and 1 in values/strings.xml"
+        errorLine1="    &lt;string name=&quot;key_radius&quot;>按键圆角半径&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-zh-rCN/strings.xml"
+            line="82"
+            column="5"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="81"
+            column="5"
+            message="Conflicting number of arguments (1) here"/>
+    </issue>
+
+</issues>

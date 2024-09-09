@@ -72,6 +72,9 @@ android {
         compose true
     }
     namespace 'com.dessalines.thumbkey'
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
 }
 
 composeCompiler {
