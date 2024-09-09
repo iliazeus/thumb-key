@@ -70,6 +70,26 @@ class ComposeKeyboardView(
                             }
                         }
                     },
+                    onSwitchPositionRight = {
+                        ctx.lifecycleScope.launch {
+                            val state = settingsState.value
+                            state?.let { s ->
+                                val nextPosition = if (s.position == 1) 1 else (s.position + 1).mod(3)
+                                val s2 = s.copy(position = nextPosition)
+                                settingsRepo.update(s2)
+                            }
+                        }
+                    },
+                    onSwitchPositionLeft = {
+                        ctx.lifecycleScope.launch {
+                            val state = settingsState.value
+                            state?.let { s ->
+                                val nextPosition = if (s.position == 2) 2 else (s.position - 1).mod(3)
+                                val s2 = s.copy(position = nextPosition)
+                                settingsRepo.update(s2)
+                            }
+                        }
+                    },
                 )
             }
         }

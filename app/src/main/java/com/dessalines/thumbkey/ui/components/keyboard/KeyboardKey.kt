@@ -116,6 +116,8 @@ fun KeyboardKey(
     onAutoCapitalize: (enable: Boolean) -> Unit,
     onSwitchLanguage: () -> Unit,
     onSwitchPosition: () -> Unit,
+    onSwitchPositionLeft: () -> Unit,
+    onSwitchPositionRight: () -> Unit,
     oppositeCaseKey: KeyItemC? = null,
     numericKey: KeyItemC? = null,
     dragReturnEnabled: Boolean,
@@ -233,6 +235,8 @@ fun KeyboardKey(
                         onAutoCapitalize = onAutoCapitalize,
                         onSwitchLanguage = onSwitchLanguage,
                         onSwitchPosition = onSwitchPosition,
+                        onSwitchPositionLeft = onSwitchPositionLeft,
+                        onSwitchPositionRight = onSwitchPositionRight,
                     )
                     doneKeyAction(scope, action, isDragged, releasedKey, animationHelperSpeed)
                 },
@@ -250,6 +254,8 @@ fun KeyboardKey(
                             onAutoCapitalize = onAutoCapitalize,
                             onSwitchLanguage = onSwitchLanguage,
                             onSwitchPosition = onSwitchPosition,
+                            onSwitchPositionLeft = onSwitchPositionLeft,
+                            onSwitchPositionRight = onSwitchPositionRight,
                         )
                         doneKeyAction(scope, action, isDragged, releasedKey, animationHelperSpeed)
                         if (vibrateOnTap) {
@@ -499,6 +505,8 @@ fun KeyboardKey(
                                 onAutoCapitalize = onAutoCapitalize,
                                 onSwitchLanguage = onSwitchLanguage,
                                 onSwitchPosition = onSwitchPosition,
+                                onSwitchPositionLeft = onSwitchPositionLeft,
+                                onSwitchPositionRight = onSwitchPositionRight,
                             )
                             doneKeyAction(
                                 scope,
@@ -531,6 +539,8 @@ fun KeyboardKey(
                                         onAutoCapitalize = onAutoCapitalize,
                                         onSwitchLanguage = onSwitchLanguage,
                                         onSwitchPosition = onSwitchPosition,
+                                        onSwitchPositionLeft = onSwitchPositionLeft,
+                                        onSwitchPositionRight = onSwitchPositionRight,
                                         onToggleEmojiMode = onToggleEmojiMode,
                                     )
                                 }

@@ -131,6 +131,10 @@ sealed class KeyAction {
 
     data object SwitchPosition : KeyAction()
 
+    data object SwitchPositionLeft : KeyAction()
+
+    data object SwitchPositionRight : KeyAction()
+
     data object SwitchIME : KeyAction()
 
     data object SwitchIMEVoice : KeyAction()

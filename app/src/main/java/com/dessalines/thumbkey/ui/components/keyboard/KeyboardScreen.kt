@@ -78,6 +78,8 @@ fun KeyboardScreen(
     settings: AppSettings?,
     onSwitchLanguage: () -> Unit,
     onSwitchPosition: () -> Unit,
+    onSwitchPositionLeft: () -> Unit,
+    onSwitchPositionRight: () -> Unit,
 ) {
     val ctx = LocalContext.current as IMEService
 
@@ -310,6 +312,8 @@ fun KeyboardScreen(
                                 },
                                 onSwitchLanguage = onSwitchLanguage,
                                 onSwitchPosition = onSwitchPosition,
+                                onSwitchPositionLeft = onSwitchPositionLeft,
+                                onSwitchPositionRight = onSwitchPositionRight,
                                 dragReturnEnabled = dragReturnEnabled,
                                 circularDragEnabled = circularDragEnabled,
                                 clockwiseDragAction = clockwiseDragAction,
@@ -445,6 +449,8 @@ fun KeyboardScreen(
                                     },
                                     onSwitchLanguage = onSwitchLanguage,
                                     onSwitchPosition = onSwitchPosition,
+                                    onSwitchPositionLeft = onSwitchPositionLeft,
+                                    onSwitchPositionRight = onSwitchPositionRight,
                                     oppositeCaseKey =
                                         when (mode) {
                                             KeyboardMode.MAIN -> keyboardDefinition.modes.shifted

@@ -331,6 +331,8 @@ fun performKeyAction(
     onAutoCapitalize: (enable: Boolean) -> Unit,
     onSwitchLanguage: () -> Unit,
     onSwitchPosition: () -> Unit,
+    onSwitchPositionLeft: () -> Unit,
+    onSwitchPositionRight: () -> Unit,
 ) {
     when (action) {
         is KeyAction.CommitText -> {
@@ -945,6 +947,8 @@ fun performKeyAction(
 
         KeyAction.SwitchLanguage -> onSwitchLanguage()
         KeyAction.SwitchPosition -> onSwitchPosition()
+        KeyAction.SwitchPositionLeft -> onSwitchPositionLeft()
+        KeyAction.SwitchPositionRight -> onSwitchPositionRight()
         KeyAction.SwitchIME -> {
             val imeManager =
                 ime.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
