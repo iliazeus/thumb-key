@@ -50,6 +50,8 @@ data class KeyItemC(
 
 data class KeyC(
     val action: KeyAction,
+    val size: FontSizeVariant = FontSizeVariant.SMALL,
+    val color: ColorVariant = ColorVariant.SECONDARY,
     val swipeReturnAction: KeyAction? = null,
     val display: KeyDisplay? =
         when (action) {
@@ -57,9 +59,46 @@ data class KeyC(
             else -> null
         },
     val capsModeDisplay: KeyDisplay? = null,
-    val color: ColorVariant = ColorVariant.SECONDARY,
-    val size: FontSizeVariant = FontSizeVariant.SMALL,
-)
+) {
+    constructor(
+        action: KeyAction,
+        icon: ImageVector?,
+        size: FontSizeVariant = FontSizeVariant.SMALL,
+        color: ColorVariant = ColorVariant.SECONDARY,
+        swipeReturnAction: KeyAction? = null,
+        capsModeDisplay: KeyDisplay? = null,
+    ) : this(action, size, color, swipeReturnAction, if (icon != null) KeyDisplay.IconDisplay(icon) else null, capsModeDisplay)
+
+    constructor(
+        event: KeyEvent,
+        icon: ImageVector?,
+        size: FontSizeVariant = FontSizeVariant.SMALL,
+        color: ColorVariant = ColorVariant.SECONDARY,
+        swipeReturnAction: KeyAction? = null,
+        display: KeyDisplay? = if (icon != null) KeyDisplay.IconDisplay(icon) else null,
+        capsModeDisplay: KeyDisplay? = null,
+    ) : this(KeyAction.SendEvent(event), size, color, swipeReturnAction, display, capsModeDisplay)
+
+    constructor(
+        text: String,
+        size: FontSizeVariant = FontSizeVariant.SMALL,
+        color: ColorVariant = ColorVariant.SECONDARY,
+        action: KeyAction = KeyAction.CommitText(text),
+        swipeReturnAction: KeyAction? = null,
+        display: KeyDisplay? = KeyDisplay.TextDisplay(text),
+        capsModeDisplay: KeyDisplay? = null,
+    ) : this(action, size, color, swipeReturnAction, display, capsModeDisplay)
+
+    constructor(
+        text: String,
+        event: KeyEvent,
+        size: FontSizeVariant = FontSizeVariant.SMALL,
+        color: ColorVariant = ColorVariant.SECONDARY,
+        swipeReturnAction: KeyAction? = null,
+        display: KeyDisplay? = KeyDisplay.TextDisplay(text),
+        capsModeDisplay: KeyDisplay? = null,
+    ) : this(KeyAction.SendEvent(event), size, color, swipeReturnAction, display, capsModeDisplay)
+}
 
 sealed class KeyDisplay {
     class TextDisplay(
