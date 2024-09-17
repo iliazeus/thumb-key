@@ -65,19 +65,36 @@ data class KeyC(
         icon: ImageVector?,
         size: FontSizeVariant = FontSizeVariant.SMALL,
         color: ColorVariant = ColorVariant.SECONDARY,
+        capsModeIcon: ImageVector? = null,
         swipeReturnAction: KeyAction? = null,
-        capsModeDisplay: KeyDisplay? = null,
-    ) : this(action, size, color, swipeReturnAction, if (icon != null) KeyDisplay.IconDisplay(icon) else null, capsModeDisplay)
+        display: KeyDisplay? = if (icon != null) KeyDisplay.IconDisplay(icon) else null,
+        capsModeDisplay: KeyDisplay? = if (capsModeIcon != null) KeyDisplay.IconDisplay(capsModeIcon) else null,
+    ) : this(
+        action,
+        size,
+        color,
+        swipeReturnAction,
+        display,
+        capsModeDisplay,
+    )
 
     constructor(
         event: KeyEvent,
         icon: ImageVector?,
         size: FontSizeVariant = FontSizeVariant.SMALL,
         color: ColorVariant = ColorVariant.SECONDARY,
+        capsModeIcon: ImageVector? = null,
         swipeReturnAction: KeyAction? = null,
         display: KeyDisplay? = if (icon != null) KeyDisplay.IconDisplay(icon) else null,
-        capsModeDisplay: KeyDisplay? = null,
-    ) : this(KeyAction.SendEvent(event), size, color, swipeReturnAction, display, capsModeDisplay)
+        capsModeDisplay: KeyDisplay? = if (capsModeIcon != null) KeyDisplay.IconDisplay(capsModeIcon) else null,
+    ) : this(
+        KeyAction.SendEvent(event),
+        size,
+        color,
+        swipeReturnAction,
+        display,
+        capsModeDisplay,
+    )
 
     constructor(
         text: String,
