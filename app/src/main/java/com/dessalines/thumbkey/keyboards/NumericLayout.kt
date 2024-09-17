@@ -17,10 +17,10 @@ open class NumericLayout : BaseLayout() {
     open fun keyboard() =
         KeyboardC(
             listOf(
-                listOf(key1(), key2(),     key3(),      keyEmoji()),
-                listOf(key4(), key5(),     key6(),      keyAbc()),
-                listOf(key7(), key8(),     key9(),      keyBackspace()),
-                listOf(key0(width = 2),    keySpace(),  keyReturn()),
+                listOf(keyEmoji(),     key1(), key2(),     key3(),      keyEmoji()),
+                listOf(keyAbc(),       key4(), key5(),     key6(),      keyAbc()),
+                listOf(keyBackspace(), key7(), key8(),     key9(),      keyBackspace()),
+                listOf(keyReturn(),    key0(width = 2),    keySpace(),  keyReturn()),
             ),
         )
 

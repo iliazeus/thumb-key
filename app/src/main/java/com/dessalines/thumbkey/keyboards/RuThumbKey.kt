@@ -16,7 +16,7 @@ import com.dessalines.thumbkey.utils.SwipeNWay.*
 
 val KB_RU_THUMBKEY =
     KeyboardDefinition(
-        title = "русский thumb-key",
+        title = "русский thumb-key double-control",
         modes = KeyboardDefinitionModes(
             main = RuThumbKeyLayout().keyboard(),
             shifted = RuThumbKeyShiftedLayout().keyboard(),

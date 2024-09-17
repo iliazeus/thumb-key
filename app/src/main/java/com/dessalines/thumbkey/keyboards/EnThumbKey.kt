@@ -16,7 +16,7 @@ import com.dessalines.thumbkey.utils.SwipeNWay.*
 
 val KB_EN_THUMBKEY =
     KeyboardDefinition(
-        title = "english thumb-key",
+        title = "english thumb-key double-control",
         modes =
             KeyboardDefinitionModes(
                 main = EnThumbKeyLayout().keyboard(),
@@ -34,10 +34,10 @@ open class EnThumbKeyLayout : BaseLayout() {
     open fun keyboard() =
         KeyboardC(
             listOf(
-                listOf(keyS(), keyR(), keyO(), keyEmoji()),
-                listOf(keyN(), keyH(), keyA(), keyNum()),
-                listOf(keyT(), keyI(), keyE(), keyBackspace()),
-                listOf(keySpace(width = 3),    keyReturn()),
+                listOf(keyEmoji(),     keyS(), keyR(), keyO(), keyEmoji()),
+                listOf(keyNum(),       keyN(), keyH(), keyA(), keyNum()),
+                listOf(keyBackspace(), keyT(), keyI(), keyE(), keyBackspace()),
+                listOf(keyReturn(),    keySpace(width = 3),    keyReturn()),
             ),
         )
 
