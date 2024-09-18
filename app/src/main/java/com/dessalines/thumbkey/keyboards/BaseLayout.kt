@@ -40,6 +40,7 @@ open class BaseLayout {
     open fun keyEmoji() =
         KeyItemC(
             center = KeyC(ToggleEmojiMode(true), Icons.Outlined.Mood, LARGE, color = SECONDARY),
+            longPress = GotoSettings,
             swipeType = FOUR_WAY_CROSS,
             swipes =
                 mapOf(

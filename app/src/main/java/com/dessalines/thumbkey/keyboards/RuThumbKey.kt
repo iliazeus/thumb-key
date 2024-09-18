@@ -28,7 +28,9 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
     override fun keyS() =
         KeyItemC(
             center = KeyC("с", LARGE, color = PRIMARY),
+            longPress = CommitText("1"),
             swipes = mapOf(
+                TOP_LEFT to KeyC("(", color = MUTED),
                 RIGHT to KeyC("щ"),
                 BOTTOM_RIGHT to KeyC("й"),
                 BOTTOM to KeyC("э"),
@@ -38,6 +40,7 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
     override fun keyR() =
         KeyItemC(
             center = KeyC("р", LARGE, color = PRIMARY),
+            longPress = CommitText("2"),
             swipeType = TWO_WAY_VERTICAL,
             swipes = mapOf(
                 BOTTOM to KeyC("х"),
@@ -47,8 +50,10 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
     override fun keyO() =
         KeyItemC(
             center = KeyC("а", LARGE, color = PRIMARY),
+            longPress = CommitText("3"),
             swipeType = FOUR_WAY_DIAGONAL,
             swipes = mapOf(
+                TOP_RIGHT to KeyC(")", color = MUTED),
                 BOTTOM_LEFT to KeyC("ж"),
             ),
         )
@@ -56,6 +61,7 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
     override fun keyN() =
         KeyItemC(
             center = KeyC("н", LARGE, color = PRIMARY),
+            longPress = CommitText("4"),
             swipeType = FOUR_WAY_CROSS,
             swipes = mapOf(
                 RIGHT to KeyC("м"),
@@ -66,6 +72,7 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
     override fun keyH() =
         KeyItemC(
             center = KeyC("в", LARGE, color = PRIMARY),
+            longPress = CommitText("5"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("я"),
                 TOP to KeyC("ы"),
@@ -81,6 +88,7 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
     override fun keyA() =
         KeyItemC(
             center = KeyC("е", LARGE, color = PRIMARY),
+            longPress = CommitText("6"),
             swipeType = FOUR_WAY_CROSS,
             swipes = mapOf(
                 LEFT to KeyC("ф"),
@@ -102,6 +110,7 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
     override fun keyT() =
         KeyItemC(
             center = KeyC("т", LARGE, color = PRIMARY),
+            longPress = CommitText("7"),
             swipes = mapOf(
                 TOP_RIGHT to KeyC("ч"),
                 TOP to KeyC("ш"),
@@ -112,6 +121,7 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
     override fun keyI() =
         KeyItemC(
             center = KeyC("и", LARGE, color = PRIMARY),
+            longPress = CommitText("8"),
             swipes = mapOf(
                 TOP to KeyC("б"),
                 RIGHT to KeyC("ц"),
@@ -119,7 +129,7 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
                 TOP_RIGHT to KeyC("'", color = MUTED),
                 BOTTOM_RIGHT to KeyC("-", color = MUTED),
                 BOTTOM to KeyC(".", color = MUTED),
-                BOTTOM_LEFT to KeyC("*", color = MUTED),
+                BOTTOM_LEFT to KeyC(";", color = MUTED),
                 LEFT to KeyC(",", color = MUTED),
             ),
         )
@@ -127,6 +137,7 @@ open class RuThumbKeyLayout : EnThumbKeyLayout() {
     override fun keyE() =
         KeyItemC(
             center = KeyC("о", LARGE, color = PRIMARY),
+            longPress = CommitText("9"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("д"),
                 BOTTOM to KeyC("ю"),
@@ -139,7 +150,9 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
     override fun keyS() =
         KeyItemC(
             center = KeyC("С", LARGE, color = PRIMARY),
+            longPress = CommitText("1"),
             swipes = mapOf(
+                TOP_LEFT to KeyC(":(", color = MUTED),
                 RIGHT to KeyC("Щ"),
                 BOTTOM_RIGHT to KeyC("Й"),
                 BOTTOM to KeyC("Э"),
@@ -149,6 +162,7 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
     override fun keyR() =
         KeyItemC(
             center = KeyC("Р", LARGE, color = PRIMARY),
+            longPress = CommitText("2"),
             swipeType = TWO_WAY_VERTICAL,
             swipes = mapOf(
                 BOTTOM to KeyC("Х"),
@@ -158,8 +172,10 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
     override fun keyO() =
         KeyItemC(
             center = KeyC("А", LARGE, color = PRIMARY),
+            longPress = CommitText("3"),
             swipeType = FOUR_WAY_DIAGONAL,
             swipes = mapOf(
+                TOP_RIGHT to KeyC(":)", color = MUTED),
                 BOTTOM_LEFT to KeyC("Ж"),
             ),
         )
@@ -167,6 +183,7 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
     override fun keyN() =
         KeyItemC(
             center = KeyC("Н", LARGE, color = PRIMARY),
+            longPress = CommitText("4"),
             swipeType = FOUR_WAY_CROSS,
             swipes = mapOf(
                 RIGHT to KeyC("М"),
@@ -177,6 +194,7 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
     override fun keyH() =
         KeyItemC(
             center = KeyC("В", LARGE, color = PRIMARY),
+            longPress = CommitText("5"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("Я"),
                 TOP to KeyC("Ы"),
@@ -192,6 +210,7 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
     override fun keyA() =
         KeyItemC(
             center = KeyC("Е", LARGE, color = PRIMARY),
+            longPress = CommitText("6"),
             swipeType = FOUR_WAY_CROSS,
             swipes = mapOf(
                 LEFT to KeyC("Ф"),
@@ -214,6 +233,7 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
     override fun keyT() =
         KeyItemC(
             center = KeyC("Т", LARGE, color = PRIMARY),
+            longPress = CommitText("7"),
             swipes = mapOf(
                 TOP_RIGHT to KeyC("Ч"),
                 TOP to KeyC("Ш"),
@@ -224,6 +244,7 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
     override fun keyI() =
         KeyItemC(
             center = KeyC("И", LARGE, color = PRIMARY),
+            longPress = CommitText("8"),
             swipes = mapOf(
                 TOP to KeyC("Б"),
                 RIGHT to KeyC("Ц"),
@@ -231,7 +252,7 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
                 TOP_RIGHT to KeyC("'", color = MUTED),
                 BOTTOM_RIGHT to KeyC("-", color = MUTED),
                 BOTTOM to KeyC(".", color = MUTED),
-                BOTTOM_LEFT to KeyC("*", color = MUTED),
+                BOTTOM_LEFT to KeyC(";", color = MUTED),
                 LEFT to KeyC(",", color = MUTED),
             ),
         )
@@ -239,6 +260,7 @@ open class RuThumbKeyShiftedLayout : RuThumbKeyLayout() {
     override fun keyE() =
         KeyItemC(
             center = KeyC("О", LARGE, color = PRIMARY),
+            longPress = CommitText("9"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("Д"),
                 BOTTOM to KeyC("Ю"),

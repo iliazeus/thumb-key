@@ -44,13 +44,18 @@ open class EnThumbKeyLayout : BaseLayout() {
     open fun keyS() =
         KeyItemC(
             center = KeyC("s", LARGE, color = PRIMARY),
+            longPress = CommitText("1"),
             swipeType = FOUR_WAY_DIAGONAL,
-            swipes = mapOf(BOTTOM_RIGHT to KeyC("w")),
+            swipes = mapOf(
+                TOP_LEFT to KeyC("(", color = MUTED),
+                BOTTOM_RIGHT to KeyC("w"),
+            ),
         )
 
     open fun keyR() =
         KeyItemC(
             center = KeyC("r", LARGE, color = PRIMARY),
+            longPress = CommitText("2"),
             swipeType = TWO_WAY_VERTICAL,
             swipes = mapOf(BOTTOM to KeyC("g")),
         )
@@ -58,13 +63,18 @@ open class EnThumbKeyLayout : BaseLayout() {
     open fun keyO() =
         KeyItemC(
             center = KeyC("o", LARGE, color = PRIMARY),
+            longPress = CommitText("3"),
             swipeType = FOUR_WAY_DIAGONAL,
-            swipes = mapOf(BOTTOM_LEFT to KeyC("u")),
+            swipes = mapOf(
+                TOP_RIGHT to KeyC(")", color = MUTED),
+                BOTTOM_LEFT to KeyC("u"),
+            ),
         )
 
     open fun keyN() =
         KeyItemC(
             center = KeyC("n", LARGE, color = PRIMARY),
+            longPress = CommitText("4"),
             swipeType = TWO_WAY_HORIZONTAL,
             swipes = mapOf(RIGHT to KeyC("m")),
         )
@@ -72,6 +82,7 @@ open class EnThumbKeyLayout : BaseLayout() {
     open fun keyH() =
         KeyItemC(
             center = KeyC("h", LARGE, color = PRIMARY),
+            longPress = CommitText("5"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("j"),
                 TOP to KeyC("q"),
@@ -87,6 +98,7 @@ open class EnThumbKeyLayout : BaseLayout() {
     open fun keyA() =
         KeyItemC(
             center = KeyC("a", LARGE, color = PRIMARY),
+            longPress = CommitText("6"),
             swipeType = FOUR_WAY_CROSS,
             swipes = mapOf(
                 LEFT to KeyC("l"),
@@ -106,6 +118,7 @@ open class EnThumbKeyLayout : BaseLayout() {
     open fun keyT() =
         KeyItemC(
             center = KeyC("t", LARGE, color = PRIMARY),
+            longPress = CommitText("7"),
             swipeType = FOUR_WAY_DIAGONAL,
             swipes = mapOf(TOP_RIGHT to KeyC("c")),
         )
@@ -113,35 +126,46 @@ open class EnThumbKeyLayout : BaseLayout() {
     open fun keyI() =
         KeyItemC(
             center = KeyC("i", LARGE, color = PRIMARY),
+            longPress = CommitText("8"),
             swipes = mapOf(
                 TOP to KeyC("f"),
-                TOP_RIGHT to KeyC("'", color = MUTED),
                 RIGHT to KeyC("z"),
+                TOP_LEFT to KeyC("\"", color = MUTED),
+                TOP_RIGHT to KeyC("'", color = MUTED),
                 BOTTOM_RIGHT to KeyC("-", color = MUTED),
                 BOTTOM to KeyC(".", color = MUTED),
-                BOTTOM_LEFT to KeyC("*", color = MUTED),
+                BOTTOM_LEFT to KeyC(";", color = MUTED),
+                LEFT to KeyC(",", color = MUTED),
             ),
         )
 
     open fun keyE() =
         KeyItemC(
             center = KeyC("e", LARGE, color = PRIMARY),
+            longPress = CommitText("9"),
             swipeType = FOUR_WAY_DIAGONAL,
             swipes = mapOf(TOP_LEFT to KeyC("d")),
         )
+
+    override fun keySpace(width: Int) = super.keySpace(width).copy(longPress = CommitText("0"))
 }
 
 open class EnThumbKeyShiftedLayout : EnThumbKeyLayout() {
     override fun keyS() =
         KeyItemC(
             center = KeyC("S", LARGE, color = PRIMARY),
+            longPress = CommitText("1"),
             swipeType = FOUR_WAY_DIAGONAL,
-            swipes = mapOf(BOTTOM_RIGHT to KeyC("W")),
+            swipes = mapOf(
+                TOP_LEFT to KeyC(":(", color = MUTED),
+                BOTTOM_RIGHT to KeyC("W"),
+            ),
         )
 
     override fun keyR() =
         KeyItemC(
             center = KeyC("R", LARGE, color = PRIMARY),
+            longPress = CommitText("2"),
             swipeType = TWO_WAY_VERTICAL,
             swipes = mapOf(BOTTOM to KeyC("G")),
         )
@@ -149,13 +173,18 @@ open class EnThumbKeyShiftedLayout : EnThumbKeyLayout() {
     override fun keyO() =
         KeyItemC(
             center = KeyC("O", LARGE, color = PRIMARY),
+            longPress = CommitText("3"),
             swipeType = FOUR_WAY_DIAGONAL,
-            swipes = mapOf(BOTTOM_LEFT to KeyC("U")),
+            swipes = mapOf(
+                TOP_RIGHT to KeyC(":)", color = MUTED),
+                BOTTOM_LEFT to KeyC("U"),
+            ),
         )
 
     override fun keyN() =
         KeyItemC(
             center = KeyC("N", LARGE, color = PRIMARY),
+            longPress = CommitText("4"),
             swipeType = TWO_WAY_HORIZONTAL,
             swipes = mapOf(RIGHT to KeyC("M")),
         )
@@ -163,6 +192,7 @@ open class EnThumbKeyShiftedLayout : EnThumbKeyLayout() {
     override fun keyH() =
         KeyItemC(
             center = KeyC("H", LARGE, color = PRIMARY),
+            longPress = CommitText("5"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("J"),
                 TOP to KeyC("Q"),
@@ -178,6 +208,7 @@ open class EnThumbKeyShiftedLayout : EnThumbKeyLayout() {
     override fun keyA() =
         KeyItemC(
             center = KeyC("A", LARGE, color = PRIMARY),
+            longPress = CommitText("6"),
             swipeType = FOUR_WAY_CROSS,
             swipes = mapOf(
                 LEFT to KeyC("L"),
@@ -200,6 +231,7 @@ open class EnThumbKeyShiftedLayout : EnThumbKeyLayout() {
     override fun keyT() =
         KeyItemC(
             center = KeyC("T", LARGE, color = PRIMARY),
+            longPress = CommitText("7"),
             swipeType = FOUR_WAY_DIAGONAL,
             swipes = mapOf(TOP_RIGHT to KeyC("C")),
         )
@@ -207,19 +239,23 @@ open class EnThumbKeyShiftedLayout : EnThumbKeyLayout() {
     override fun keyI() =
         KeyItemC(
             center = KeyC("I", LARGE, color = PRIMARY),
+            longPress = CommitText("8"),
             swipes = mapOf(
                 TOP to KeyC("F"),
-                TOP_RIGHT to KeyC("'", color = MUTED),
                 RIGHT to KeyC("Z"),
+                TOP_LEFT to KeyC("\"", color = MUTED),
+                TOP_RIGHT to KeyC("'", color = MUTED),
                 BOTTOM_RIGHT to KeyC("-", color = MUTED),
                 BOTTOM to KeyC(".", color = MUTED),
-                BOTTOM_LEFT to KeyC("*", color = MUTED),
+                BOTTOM_LEFT to KeyC(";", color = MUTED),
+                LEFT to KeyC(",", color = MUTED),
             ),
         )
 
     override fun keyE() =
         KeyItemC(
             center = KeyC("E", LARGE, color = PRIMARY),
+            longPress = CommitText("9"),
             swipeType = FOUR_WAY_DIAGONAL,
             swipes = mapOf(TOP_LEFT to KeyC("D")),
         )
