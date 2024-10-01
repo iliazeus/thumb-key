@@ -1,3 +1,7 @@
+# Warning
+
+This fork has already diverged pretty significantly from the original Thumb-Key, so some of the things written here might not reflect the current code architecture. If you just want a new layout to your Thumb-Key, consider contributing to the [original repo](https://github.com/dessalines/thumb-key).
+
 # Contributing to Thumb-Key
 
 <!-- prettier-ignore-start -->
