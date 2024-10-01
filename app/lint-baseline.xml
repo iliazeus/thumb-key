@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<issues format="6" by="lint 8.6.0" type="baseline" client="gradle" dependencies="false" name="AGP (8.6.0)" variant="all" version="8.6.0">
+<issues format="6" by="lint 8.6.1" type="baseline" client="gradle" dependencies="false" name="AGP (8.6.1)" variant="all" version="8.6.1">
+
+    <issue
+        id="ObsoleteLintCustomCheck"
+        message="Library lint checks reference invalid APIs; these checks **will be skipped**!&#xA;&#xA;Lint found an issue registry (`androidx.navigation.common.lint.NavigationCommonIssueRegistry`)&#xA;which contains some references to invalid API:&#xA;com.android.tools.lint.checks.infrastructure.TestFiles: com.android.tools.lint.checks.infrastructure.TestFile bytecode(java.lang.String,com.android.tools.lint.checks.infrastructure.TestFile,long,java.lang.String[])&#xA;(Referenced from androidx/navigation/lint/common/LintUtilKt.class)&#xA;&#xA;Therefore, this lint check library is **not** included&#xA;in analysis. This affects the following lint checks:&#xA;`EmptyNavDeepLink`,`WrongStartDestinationType`&#xA;&#xA;To use this lint check, upgrade to a more recent version&#xA;of the library.">
+        <location
+            file="$GRADLE_USER_HOME/caches/8.10.2/transforms/4fc0338649681bd864da4cd0e4fad96c/transformed/navigation-common-2.8.1/jars/lint.jar"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLintCustomCheck"
+        message="Library lint checks reference invalid APIs; these checks **will be skipped**!&#xA;&#xA;Lint found an issue registry (`androidx.navigation.compose.lint.NavigationComposeIssueRegistry`)&#xA;which contains some references to invalid API:&#xA;com.android.tools.lint.checks.infrastructure.TestFiles: com.android.tools.lint.checks.infrastructure.TestFile bytecode(java.lang.String,com.android.tools.lint.checks.infrastructure.TestFile,long,java.lang.String[])&#xA;(Referenced from androidx/navigation/lint/common/LintUtilKt.class)&#xA;&#xA;Therefore, this lint check library is **not** included&#xA;in analysis. This affects the following lint checks:&#xA;`ComposableDestinationInComposeScope`,`ComposableNavGraphInComposeScope`,`UnrememberedGetBackStackEntry`,`WrongStartDestinationType`&#xA;&#xA;To use this lint check, upgrade to a more recent version&#xA;of the library.">
+        <location
+            file="$GRADLE_USER_HOME/caches/8.10.2/transforms/064e279b81936c0674bb24f9ac018928/transformed/navigation-compose-2.8.1/jars/lint.jar"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLintCustomCheck"
+        message="Library lint checks reference invalid APIs; these checks **will be skipped**!&#xA;&#xA;Lint found an issue registry (`androidx.navigation.runtime.lint.NavigationRuntimeIssueRegistry`)&#xA;which contains some references to invalid API:&#xA;com.android.tools.lint.checks.infrastructure.TestFiles: com.android.tools.lint.checks.infrastructure.TestFile bytecode(java.lang.String,com.android.tools.lint.checks.infrastructure.TestFile,long,java.lang.String[])&#xA;(Referenced from androidx/navigation/lint/common/LintUtilKt.class)&#xA;&#xA;Therefore, this lint check library is **not** included&#xA;in analysis. This affects the following lint checks:&#xA;`DeepLinkInActivityDestination`,`WrongStartDestinationType`,`WrongNavigateRouteType`&#xA;&#xA;To use this lint check, upgrade to a more recent version&#xA;of the library.">
+        <location
+            file="$GRADLE_USER_HOME/caches/8.10.2/transforms/b7e638a1c4a2caf8df00573c11017cd5/transformed/navigation-runtime-2.8.1/jars/lint.jar"/>
+    </issue>
 
     <issue
         id="OldTargetApi"
@@ -10,72 +31,6 @@
             file="build.gradle"
             line="15"
             column="9"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of androidx.compose:compose-bom than 2024.08.00 is available: 2024.09.00"
-        errorLine1="    implementation platform(&apos;androidx.compose:compose-bom:2024.08.00&apos;)"
-        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="86"
-            column="20"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of androidx.compose.material:material-icons-extended-desktop than 1.6.8 is available: 1.7.0"
-        errorLine1="    implementation &apos;androidx.compose.material:material-icons-extended-desktop:1.6.8&apos;"
-        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="89"
-            column="20"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of androidx.activity:activity-compose than 1.9.1 is available: 1.9.2"
-        errorLine1="    implementation &apos;androidx.activity:activity-compose:1.9.1&apos;"
-        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="95"
-            column="20"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of androidx.activity:activity-ktx than 1.9.1 is available: 1.9.2"
-        errorLine1="    implementation &apos;androidx.activity:activity-ktx:1.9.1&apos;"
-        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="96"
-            column="20"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of androidx.navigation:navigation-compose than 2.7.7 is available: 2.8.0"
-        errorLine1="    implementation &apos;androidx.navigation:navigation-compose:2.7.7&apos;"
-        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="102"
-            column="20"/>
-    </issue>
-
-    <issue
-        id="GradleDependency"
-        message="A newer version of androidx.emoji2:emoji2-emojipicker than 1.4.0 is available: 1.5.0"
-        errorLine1="    implementation &quot;androidx.emoji2:emoji2-emojipicker:1.4.0&quot;"
-        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="build.gradle"
-            line="105"
-            column="20"/>
     </issue>
 
     <issue
@@ -135,7 +90,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;behavior&quot; is not translated in &quot;de&quot; (German), &quot;bg&quot; (Bulgarian), &quot;da&quot; (Danish)"
+        message="&quot;behavior&quot; is not translated in &quot;de&quot; (German) or &quot;bg&quot; (Bulgarian)"
         errorLine1="    &lt;string name=&quot;behavior&quot;>Behavior&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~">
         <location
@@ -157,7 +112,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;key_non_square&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;da&quot; (Danish), &quot;es&quot; (Spanish)"
+        message="&quot;key_non_square&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;es&quot; (Spanish)"
         errorLine1="    &lt;string name=&quot;key_non_square&quot;>Use Non-Square Keys&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -168,7 +123,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;key_height&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;da&quot; (Danish), &quot;es&quot; (Spanish)"
+        message="&quot;key_height&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;es&quot; (Spanish)"
         errorLine1="    &lt;string name=&quot;key_height&quot;>Key Height: %1$s&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
@@ -179,7 +134,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;key_width&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;da&quot; (Danish), &quot;es&quot; (Spanish)"
+        message="&quot;key_width&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;es&quot; (Spanish)"
         errorLine1="    &lt;string name=&quot;key_width&quot;>Key Width: %1$s&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
@@ -399,7 +354,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;drag_return_enable&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        message="&quot;drag_return_enable&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
         errorLine1="    &lt;string name=&quot;drag_return_enable&quot;>Drag-and-Return&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -410,7 +365,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;counterclockwise_drag_action&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        message="&quot;counterclockwise_drag_action&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
         errorLine1="    &lt;string name=&quot;counterclockwise_drag_action&quot;>Counterclockwise drag action&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -421,7 +376,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;clockwise_drag_action&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        message="&quot;clockwise_drag_action&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
         errorLine1="    &lt;string name=&quot;clockwise_drag_action&quot;>Clockwise drag action&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -432,7 +387,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;send_oppsite_case&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        message="&quot;send_oppsite_case&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
         errorLine1="    &lt;string name=&quot;send_oppsite_case&quot;>Opposite case letter&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -443,7 +398,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;send_numeric&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        message="&quot;send_numeric&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
         errorLine1="    &lt;string name=&quot;send_numeric&quot;>Number key&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~">
         <location
@@ -454,7 +409,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;circular_drag_enable&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        message="&quot;circular_drag_enable&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
         errorLine1="    &lt;string name=&quot;circular_drag_enable&quot;>Circular drag&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -465,7 +420,7 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;ghost_keys_enable&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        message="&quot;ghost_keys_enable&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
         errorLine1="    &lt;string name=&quot;ghost_keys_enable&quot;>Ghost keys&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -476,13 +431,100 @@
 
     <issue
         id="MissingTranslation"
-        message="&quot;ghost_keys_description&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        message="&quot;ghost_keys_description&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
         errorLine1="    &lt;string name=&quot;ghost_keys_description&quot;>Access hidden symbol keys without switching to numeric view&lt;/string>"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/res/values/strings.xml"
             line="89"
             column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;backup_database&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;backup_database&quot;>Backup Database&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="90"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;restore_database&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;restore_database&quot;>Restore Database&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="91"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;restore_database_warning&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;restore_database_warning&quot;>Warning: This will clear out your current database&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="92"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;database_restored&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;database_restored&quot;>Database Restored.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="93"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        message="&quot;database_backed_up&quot; is not translated in &quot;de&quot; (German), &quot;ru&quot; (Russian), &quot;bg&quot; (Bulgarian), &quot;uk&quot; (Ukrainian), &quot;fa&quot; (Persian), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;da&quot; (Danish), &quot;es&quot; (Spanish), &quot;zh&quot; (Chinese)"
+        errorLine1="    &lt;string name=&quot;database_backed_up&quot;>Database Backed up.&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="94"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        message="Inconsistent number of arguments in formatting string `key_height`; found both 0 here and 1 in values/strings.xml"
+        errorLine1="  &lt;string name=&quot;key_height&quot;>Højde på taster&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-da/strings.xml"
+            line="47"
+            column="3"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="47"
+            column="5"
+            message="Conflicting number of arguments (1) here"/>
+    </issue>
+
+    <issue
+        id="StringFormatCount"
+        message="Inconsistent number of arguments in formatting string `key_width`; found both 0 here and 1 in values/strings.xml"
+        errorLine1="  &lt;string name=&quot;key_width&quot;>Bredde på taster&lt;/string>"
+        errorLine2="  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-da/strings.xml"
+            line="48"
+            column="3"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="48"
+            column="5"
+            message="Conflicting number of arguments (1) here"/>
     </issue>
 
     <issue
