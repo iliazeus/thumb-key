@@ -1,3 +1,7 @@
+# Warning
+
+This is a heavily modified fork, and most of the modifications aren't documented. As such, huge parts of this file might be wrong or misleading. Proceed with caution.
+
 <div align="center">
 
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/dessalines/thumb-key.svg)
