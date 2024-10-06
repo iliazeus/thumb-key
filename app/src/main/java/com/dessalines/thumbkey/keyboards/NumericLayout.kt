@@ -27,6 +27,7 @@ open class NumericLayout : BaseLayout() {
     open fun key1() =
         KeyItemC(
             center = KeyC("1", LARGE, color = PRIMARY),
+            longPress = CommitText("1"),
             swipes = buildMap {
                 put(BOTTOM_LEFT, KeyC("$"))
                 getLocalCurrency()?.let {
@@ -38,6 +39,7 @@ open class NumericLayout : BaseLayout() {
     open fun key2() =
         KeyItemC(
             center = KeyC("2", LARGE, color = PRIMARY),
+            longPress = CommitText("2"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("`"),
                 TOP to KeyC("^"),
@@ -52,6 +54,7 @@ open class NumericLayout : BaseLayout() {
     open fun key3() =
         KeyItemC(
             center = KeyC("3", LARGE, color = PRIMARY),
+            longPress = CommitText("3"),
             swipes = mapOf(
                 LEFT to KeyC("?"),
                 BOTTOM_RIGHT to KeyC("€"),
@@ -63,6 +66,7 @@ open class NumericLayout : BaseLayout() {
     open fun key4() =
         KeyItemC(
             center = KeyC("4", LARGE, color = PRIMARY),
+            longPress = CommitText("4"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("{"),
                 TOP_RIGHT to KeyC("%"),
@@ -75,11 +79,13 @@ open class NumericLayout : BaseLayout() {
     open fun key5() =
         KeyItemC(
             center = KeyC("5", LARGE, color = PRIMARY),
+            longPress = CommitText("5"),
         )
 
     open fun key6() =
         KeyItemC(
             center = KeyC("6", LARGE, color = PRIMARY),
+            longPress = CommitText("6"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("|"),
                 TOP_RIGHT to KeyC("}"),
@@ -92,6 +98,7 @@ open class NumericLayout : BaseLayout() {
     open fun key7() =
         KeyItemC(
             center = KeyC("7", LARGE, color = PRIMARY),
+            longPress = CommitText("7"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("~"),
                 BOTTOM_RIGHT to KeyC(":"),
@@ -102,6 +109,7 @@ open class NumericLayout : BaseLayout() {
     open fun key8() =
         KeyItemC(
             center = KeyC("8", LARGE, color = PRIMARY),
+            longPress = CommitText("8"),
             swipes = mapOf(
                 TOP_LEFT to KeyC("\""),
                 TOP_RIGHT to KeyC("'"),
@@ -115,6 +123,7 @@ open class NumericLayout : BaseLayout() {
     open fun key9() =
         KeyItemC(
             center = KeyC("9", LARGE, color = PRIMARY),
+            longPress = CommitText("9"),
             swipes = mapOf(
                 TOP to KeyC("&"),
                 TOP_RIGHT to KeyC("°"),
@@ -127,6 +136,7 @@ open class NumericLayout : BaseLayout() {
     open fun key0(width: Int = 1) =
         KeyItemC(
             center = KeyC("0", LARGE, color = PRIMARY),
+            longPress = CommitText("0"),
             widthMultiplier = width,
         )
 }
