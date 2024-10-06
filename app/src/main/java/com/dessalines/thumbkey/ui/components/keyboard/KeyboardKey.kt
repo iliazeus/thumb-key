@@ -76,6 +76,8 @@ import com.dessalines.thumbkey.utils.toPx
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
+import kotlin.time.*
+import kotlin.time.Duration.Companion.seconds
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -85,7 +87,7 @@ fun KeyboardKey(
     // key will attempt to capture it instead. This is derived automatically from the keyboard
     // layout, and should not be set directly in the keyboard definition.
     ghostKey: KeyItemC? = null,
-    lastAction: MutableState<KeyAction?>,
+    lastAction: MutableState<Pair<KeyAction, TimeMark>?>,
     animationHelperSpeed: Int,
     animationSpeed: Int,
     autoCapitalize: Boolean,
@@ -147,6 +149,7 @@ fun KeyboardKey(
     val releasedKey = remember { mutableStateOf<String?>(null) }
 
     var tapCount by remember { mutableIntStateOf(0) }
+    val lastTapTime = remember { mutableStateOf<ComparableTimeMark?>(null) }
     val tapActions =
         if (spacebarMultiTaps) {
             buildTapActions(key)
@@ -212,14 +215,17 @@ fun KeyboardKey(
                 onClick = {
                     // Set the last key info, and the tap count
                     val cAction = key.center.action
-                    lastAction.value?.let { lastAction ->
-                        if (lastAction == cAction && !ime.didCursorMove()) {
+                    lastAction.value?.let { (action, time) ->
+                        if (time.elapsedNow() >= 1.seconds) {
+                            tapCount = 0
+                        } else if (action == cAction && !ime.didCursorMove()) {
                             tapCount += 1
                         } else {
                             tapCount = 0
                         }
                     }
-                    lastAction.value = cAction
+
+                    lastAction.value = Pair(cAction, TimeSource.Monotonic.markNow())
 
                     // Set the correct action
                     val action = tapActions[tapCount % tapActions.size]
@@ -572,7 +578,7 @@ fun KeyboardKey(
 
                         // Set tapCount and lastAction to avoid issues with multitap after slide
                         tapCount = 0
-                        lastAction.value = action
+                        lastAction.value = Pair(action, TimeSource.Monotonic.markNow())
 
                         // Reset the drags
                         offsetX = 0f

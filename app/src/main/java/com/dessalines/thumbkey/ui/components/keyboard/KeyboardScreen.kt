@@ -97,7 +97,7 @@ fun KeyboardScreen(
     }
 
     // TODO get rid of this crap
-    val lastAction = remember { mutableStateOf<KeyAction?>(null) }
+    val lastAction = remember { mutableStateOf<Pair<KeyAction, kotlin.time.TimeMark>?>(null) }
 
     val keyboardDefinition =
         KeyboardLayout.entries.sortedBy { it.ordinal }[
