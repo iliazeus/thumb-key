@@ -4,7 +4,6 @@ import com.dessalines.thumbkey.utils.ColorVariant
 import com.dessalines.thumbkey.utils.FontSizeVariant
 import com.dessalines.thumbkey.utils.KeyAction
 import com.dessalines.thumbkey.utils.KeyC
-import com.dessalines.thumbkey.utils.KeyDisplay
 import com.dessalines.thumbkey.utils.KeyItemC
 import com.dessalines.thumbkey.utils.KeyboardC
 import com.dessalines.thumbkey.utils.SwipeDirection
@@ -15,11 +14,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
         listOf(
             listOf(
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("1"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("1", size = FontSizeVariant.LARGE),
                     swipes =
                         buildMap {
                             put(
@@ -47,11 +42,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         },
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("2"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("2", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("`"),
@@ -82,11 +73,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         ),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("3"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("3", size = FontSizeVariant.LARGE),
                     left =
                         KeyC(
                             KeyAction.CommitText("?"),
@@ -106,11 +93,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                 ),
                 EMOJI_KEY_ITEM,
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("1"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("1", size = FontSizeVariant.LARGE),
                     swipes =
                         buildMap {
                             put(
@@ -138,11 +121,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         },
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("2"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("2", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("`"),
@@ -173,11 +152,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         ),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("3"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("3", size = FontSizeVariant.LARGE),
                     left =
                         KeyC(
                             KeyAction.CommitText("?"),
@@ -198,11 +173,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
             ),
             listOf(
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("4"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("4", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("{"),
@@ -225,22 +196,14 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         ),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("5"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("5", size = FontSizeVariant.LARGE),
                     top =
                         KeyC(
                             KeyAction.CommitText("¬"),
                         ),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("6"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("6", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("|"),
@@ -264,11 +227,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                 ),
                 ABC_KEY_ITEM,
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("4"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("4", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("{"),
@@ -291,22 +250,14 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         ),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("5"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("5", size = FontSizeVariant.LARGE),
                     top =
                         KeyC(
                             KeyAction.CommitText("¬"),
                         ),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("6"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("6", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("|"),
@@ -331,11 +282,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
             ),
             listOf(
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("7"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("7", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("~"),
@@ -348,18 +295,10 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         KeyC(
                             KeyAction.CommitText("*"),
                         ),
-                    bottomRight =
-                        KeyC(
-                            display = KeyDisplay.TextDisplay("⇥"),
-                            action = KeyAction.CommitText("\t"),
-                        ),
+                    bottomRight = KeyC("\t", displayText = "⇥"),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("8"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("8", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("\""),
@@ -382,11 +321,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         ),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("9"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("9", size = FontSizeVariant.LARGE),
                     top =
                         KeyC(
                             KeyAction.CommitText("&"),
@@ -410,11 +345,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                 ),
                 BACKSPACE_KEY_ITEM,
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("7"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("7", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("~"),
@@ -427,18 +358,10 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         KeyC(
                             KeyAction.CommitText("*"),
                         ),
-                    bottomRight =
-                        KeyC(
-                            display = KeyDisplay.TextDisplay("⇥"),
-                            action = KeyAction.CommitText("\t"),
-                        ),
+                    bottomRight = KeyC("\t", displayText = "⇥"),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("8"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("8", size = FontSizeVariant.LARGE),
                     topLeft =
                         KeyC(
                             KeyAction.CommitText("\""),
@@ -461,11 +384,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                         ),
                 ),
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("9"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("9", size = FontSizeVariant.LARGE),
                     top =
                         KeyC(
                             KeyAction.CommitText("&"),
@@ -490,11 +409,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
             ),
             listOf(
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("0"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("0", size = FontSizeVariant.LARGE),
                     widthMultiplier = 2,
                 ),
                 KeyItemC(
@@ -514,11 +429,7 @@ val KB_EN_MESSAGEASE_TWO_HANDS_NUMERIC =
                 ),
                 RETURN_KEY_ITEM,
                 KeyItemC(
-                    center =
-                        KeyC(
-                            KeyAction.CommitText("0"),
-                            size = FontSizeVariant.LARGE,
-                        ),
+                    center = KeyC("0", size = FontSizeVariant.LARGE),
                     widthMultiplier = 2,
                 ),
                 KeyItemC(
