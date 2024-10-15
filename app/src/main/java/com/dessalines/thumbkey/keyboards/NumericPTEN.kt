@@ -18,7 +18,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("1"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                     swipes =
                         buildMap {
@@ -45,7 +44,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("2"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                     topLeft =
                         KeyC(
@@ -81,7 +79,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("3"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                     topLeft =
                         KeyC(
@@ -128,7 +125,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("4"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                     topLeft =
                         KeyC(
@@ -161,7 +157,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("5"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                 ),
                 KeyItemC(
@@ -169,7 +164,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("6"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                     topLeft =
                         KeyC(
@@ -200,7 +194,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("7"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                     topLeft =
                         KeyC(
@@ -220,7 +213,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("8"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                     topLeft =
                         KeyC(
@@ -262,7 +254,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("9"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                     topLeft =
                         KeyC(
@@ -298,7 +289,6 @@ val NUMERIC_PT_EN_KEYBOARD =
                         KeyC(
                             action = KeyAction.CommitText("0"),
                             size = FontSizeVariant.LARGE,
-                            color = ColorVariant.PRIMARY,
                         ),
                     widthMultiplier = 2,
                 ),
