@@ -88,7 +88,6 @@ val KB_ES_THUMBKEY_SYMBOLS_MAIN =
                             ToggleShiftMode(false),
                             swipeReturnAction = ToggleCurrentWordCapitalization(false),
                         ),
-                    bottom = KeyC(")"),
                     bottomRight = KeyC("]"),
                 ),
                 NUMERIC_KEY_ITEM,

@@ -144,7 +144,6 @@ val KB_ES_CA_MESSAGEASE_SHIFTED =
                     bottom = KeyC("Á"),
                     top = KeyC("À"),
                     right = KeyC("-", color = MUTED),
-                    bottom = KeyC("Á"),
                 ),
                 KeyItemC(
                     center = KeyC("N", size = LARGE),
@@ -237,7 +236,6 @@ val KB_ES_CA_MESSAGEASE_SHIFTED =
                     right = KeyC("Z"),
                     left = KeyC("É"),
                     bottomRight = KeyC("-", color = MUTED),
-                    bottomRight = KeyC(":", color = MUTED),
                     bottom = KeyC(".", color = MUTED),
                     bottomLeft = KeyC(",", color = MUTED),
                 ),

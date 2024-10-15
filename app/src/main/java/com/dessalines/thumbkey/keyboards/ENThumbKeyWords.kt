@@ -213,7 +213,6 @@ val KB_EN_THUMBKEY_WORDS_SHIFTED =
                     bottom = KeyC(".", color = MUTED),
                     bottomLeft = KeyC("*", color = MUTED),
                     topLeft = KeyC("This", color = MUTED, size = SMALLEST),
-                    topRight = KeyC("That", color = MUTED, size = SMALLEST),
                     left = KeyC("I'm", color = MUTED, size = SMALLEST),
                 ),
                 KeyItemC(

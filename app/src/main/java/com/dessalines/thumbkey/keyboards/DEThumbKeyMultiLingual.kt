@@ -65,7 +65,7 @@ val KB_DE_THUMBKEY_MULTILINGUAL_MAIN =
                 KeyItemC(
                     center = KeyC("i", size = LARGE),
                     bottom = KeyC("ï", color = MUTED),
-                    right = KeyC("ì", color = MUTED),
+                    bottomRight = KeyC("ì", color = MUTED),
                     right = KeyC("î", color = MUTED),
                     top =
                         KeyC(
@@ -173,7 +173,7 @@ val KB_DE_THUMBKEY_MULTILINGUAL_SHIFTED =
                 ),
                 KeyItemC(
                     center = KeyC("I", size = LARGE),
-                    bottom = KeyC("Ï", color = MUTED),
+                    bottomLeft = KeyC("Ï", color = MUTED),
                     right = KeyC("Ì", color = MUTED),
                     bottomRight = KeyC("Î", color = MUTED),
                     bottom =

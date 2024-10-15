@@ -130,7 +130,7 @@ val KB_EN_EO_MESSAGEASE_SYMBOLS_MAIN =
                     bottomLeft = KeyC(";", color = MUTED),
                     bottom = KeyC("ŝ"),
                     left = KeyC("🇦🇺", color = MUTED),
-                    left = KeyC("#", color = MUTED),
+                    bottomRight = KeyC("#", color = MUTED),
                 ),
                 BACKSPACE_KEY_ITEM,
             ),

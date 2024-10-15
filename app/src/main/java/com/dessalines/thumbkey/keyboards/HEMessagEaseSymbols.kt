@@ -86,10 +86,6 @@ val KB_HE_MESSAGEASE_SYMBOLS_MAIN =
                     bottomRight = KeyC(":", color = MUTED),
                     bottom = KeyC(".", color = MUTED),
                     bottomLeft = KeyC(",", color = MUTED),
-                    topRight = KeyC("'", color = MUTED),
-                    topLeft = KeyC("\"", color = MUTED),
-                    bottom = KeyC(".", color = MUTED),
-                    bottomLeft = KeyC(",", color = MUTED),
                 ),
                 KeyItemC(
                     center = KeyC("ל", size = LARGE),

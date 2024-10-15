@@ -378,7 +378,6 @@ val KB_FR_MESSAGEASE_SHIFTED =
                             CommitText("É"),
                         ),
                     bottomRight = KeyC("-", color = MUTED),
-                    bottomRight = KeyC(":", color = MUTED),
                     bottom = KeyC(".", color = MUTED),
                     bottomLeft = KeyC(",", color = MUTED),
                 ),
