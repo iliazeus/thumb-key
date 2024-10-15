@@ -26,26 +26,23 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_DIAGONAL,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("¬"),
-                                ),
-                            SwipeDirection.TOP_RIGHT to
-                                KeyC(
-                                    // secret! (to avoid excessive visual noise)
-                                    display = KeyDisplay.TextDisplay(""),
-                                    action = KeyAction.CommitText("¹"),
-                                ),
-                            SwipeDirection.BOTTOM_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("_"),
-                                ),
-                            SwipeDirection.BOTTOM_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("|"),
-                                ),
+                    topLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("¬"),
+                        ),
+                    topRight =
+                        KeyC(
+                            // secret! (to avoid excessive visual noise)
+                            display = KeyDisplay.TextDisplay(""),
+                            action = KeyAction.CommitText("¹"),
+                        ),
+                    bottomLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("_"),
+                        ),
+                    bottomRight =
+                        KeyC(
+                            action = KeyAction.CommitText("|"),
                         ),
                 ),
                 KeyItemC(
@@ -56,26 +53,23 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_DIAGONAL,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("°"),
-                                ),
-                            SwipeDirection.TOP_RIGHT to
-                                KeyC(
-                                    // secret! (to avoid excessive visual noise)
-                                    display = KeyDisplay.TextDisplay(""),
-                                    action = KeyAction.CommitText("²"),
-                                ),
-                            SwipeDirection.BOTTOM_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText(":"),
-                                ),
-                            SwipeDirection.BOTTOM_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText(";"),
-                                ),
+                    topLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("°"),
+                        ),
+                    topRight =
+                        KeyC(
+                            // secret! (to avoid excessive visual noise)
+                            display = KeyDisplay.TextDisplay(""),
+                            action = KeyAction.CommitText("²"),
+                        ),
+                    bottomLeft =
+                        KeyC(
+                            action = KeyAction.CommitText(":"),
+                        ),
+                    bottomRight =
+                        KeyC(
+                            action = KeyAction.CommitText(";"),
                         ),
                 ),
                 KeyItemC(
@@ -86,18 +80,15 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_DIAGONAL,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("^"),
-                                ),
-                            SwipeDirection.TOP_RIGHT to
-                                KeyC(
-                                    // secret! (to avoid excessive visual noise)
-                                    display = KeyDisplay.TextDisplay(""),
-                                    action = KeyAction.CommitText("³"),
-                                ),
+                    topLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("^"),
+                        ),
+                    topRight =
+                        KeyC(
+                            // secret! (to avoid excessive visual noise)
+                            display = KeyDisplay.TextDisplay(""),
+                            action = KeyAction.CommitText("³"),
                         ),
                 ),
                 EMOJI_KEY_ITEM,
@@ -111,20 +102,17 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_CROSS,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP to
-                                KeyC(
-                                    action = KeyAction.CommitText("<"),
-                                ),
-                            SwipeDirection.LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("{"),
-                                ),
-                            SwipeDirection.RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("["),
-                                ),
+                    top =
+                        KeyC(
+                            action = KeyAction.CommitText("<"),
+                        ),
+                    left =
+                        KeyC(
+                            action = KeyAction.CommitText("{"),
+                        ),
+                    right =
+                        KeyC(
+                            action = KeyAction.CommitText("["),
                         ),
                 ),
                 KeyItemC(
@@ -175,24 +163,21 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_DIAGONAL,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("!"),
-                                ),
-                            SwipeDirection.TOP_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("?"),
-                                ),
-                            SwipeDirection.BOTTOM_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("."),
-                                ),
-                            SwipeDirection.BOTTOM_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText(","),
-                                ),
+                    topLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("!"),
+                        ),
+                    topRight =
+                        KeyC(
+                            action = KeyAction.CommitText("?"),
+                        ),
+                    bottomRight =
+                        KeyC(
+                            action = KeyAction.CommitText("."),
+                        ),
+                    bottomLeft =
+                        KeyC(
+                            action = KeyAction.CommitText(","),
                         ),
                 ),
                 KeyItemC(
@@ -203,24 +188,21 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_DIAGONAL,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("`"),
-                                ),
-                            SwipeDirection.TOP_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("´"),
-                                ),
-                            SwipeDirection.BOTTOM_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("\""),
-                                ),
-                            SwipeDirection.BOTTOM_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("'"),
-                                ),
+                    topLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("`"),
+                        ),
+                    topRight =
+                        KeyC(
+                            action = KeyAction.CommitText("´"),
+                        ),
+                    bottomLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("\""),
+                        ),
+                    bottomRight =
+                        KeyC(
+                            action = KeyAction.CommitText("'"),
                         ),
                 ),
                 KeyItemC(
@@ -231,20 +213,17 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_CROSS,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP to
-                                KeyC(
-                                    action = KeyAction.CommitText(">"),
-                                ),
-                            SwipeDirection.LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("]"),
-                                ),
-                            SwipeDirection.RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("}"),
-                                ),
+                    top =
+                        KeyC(
+                            action = KeyAction.CommitText(">"),
+                        ),
+                    left =
+                        KeyC(
+                            action = KeyAction.CommitText("]"),
+                        ),
+                    right =
+                        KeyC(
+                            action = KeyAction.CommitText("}"),
                         ),
                 ),
             ),
@@ -267,24 +246,21 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_DIAGONAL,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("="),
-                                ),
-                            SwipeDirection.TOP_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("%"),
-                                ),
-                            SwipeDirection.BOTTOM_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("-"),
-                                ),
-                            SwipeDirection.BOTTOM_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("+"),
-                                ),
+                    topLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("="),
+                        ),
+                    topRight =
+                        KeyC(
+                            action = KeyAction.CommitText("%"),
+                        ),
+                    bottomLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("-"),
+                        ),
+                    bottomRight =
+                        KeyC(
+                            action = KeyAction.CommitText("+"),
                         ),
                 ),
                 KeyItemC(
@@ -295,24 +271,21 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_DIAGONAL,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("@"),
-                                ),
-                            SwipeDirection.TOP_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("&"),
-                                ),
-                            SwipeDirection.BOTTOM_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("*"),
-                                ),
-                            SwipeDirection.BOTTOM_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("#"),
-                                ),
+                    topLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("@"),
+                        ),
+                    topRight =
+                        KeyC(
+                            action = KeyAction.CommitText("&"),
+                        ),
+                    bottomLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("*"),
+                        ),
+                    bottomRight =
+                        KeyC(
+                            action = KeyAction.CommitText("#"),
                         ),
                 ),
                 KeyItemC(
@@ -323,20 +296,17 @@ val WIDE_NUMERIC_KEYBOARD =
                             color = ColorVariant.PRIMARY,
                         ),
                     swipeType = SwipeNWay.FOUR_WAY_DIAGONAL,
-                    swipes =
-                        mapOf(
-                            SwipeDirection.TOP_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("~"),
-                                ),
-                            SwipeDirection.BOTTOM_LEFT to
-                                KeyC(
-                                    action = KeyAction.CommitText("\\"),
-                                ),
-                            SwipeDirection.BOTTOM_RIGHT to
-                                KeyC(
-                                    action = KeyAction.CommitText("/"),
-                                ),
+                    topLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("~"),
+                        ),
+                    bottomLeft =
+                        KeyC(
+                            action = KeyAction.CommitText("\\"),
+                        ),
+                    bottomRight =
+                        KeyC(
+                            action = KeyAction.CommitText("/"),
                         ),
                 ),
                 KeyItemC(
