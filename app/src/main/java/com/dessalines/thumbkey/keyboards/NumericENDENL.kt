@@ -16,22 +16,10 @@ val NUMERIC_ENDENL_KEYBOARD =
                             KeyAction.CommitText("1"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("@"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("\$"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("£"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("€"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("@")),
+                    topRight = KeyC(KeyAction.CommitText("\$")),
+                    bottomRight = KeyC(KeyAction.CommitText("£")),
+                    bottomLeft = KeyC(KeyAction.CommitText("€")),
                 ),
                 KeyItemC(
                     center =
@@ -39,26 +27,11 @@ val NUMERIC_ENDENL_KEYBOARD =
                             KeyAction.CommitText("2"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("`"),
-                        ),
-                    top =
-                        KeyC(
-                            KeyAction.CommitText("^"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("´"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("\\"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("/"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("`")),
+                    top = KeyC(KeyAction.CommitText("^")),
+                    topRight = KeyC(KeyAction.CommitText("´")),
+                    bottomRight = KeyC(KeyAction.CommitText("\\")),
+                    bottomLeft = KeyC(KeyAction.CommitText("/")),
                 ),
                 KeyItemC(
                     center =
@@ -66,18 +39,9 @@ val NUMERIC_ENDENL_KEYBOARD =
                             KeyAction.CommitText("3"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("+"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("&"),
-                        ),
-                    bottom =
-                        KeyC(
-                            KeyAction.CommitText("="),
-                        ),
+                    left = KeyC(KeyAction.CommitText("+")),
+                    topRight = KeyC(KeyAction.CommitText("&")),
+                    bottom = KeyC(KeyAction.CommitText("=")),
                 ),
                 EMOJI_KEY_ITEM,
             ),
@@ -88,22 +52,10 @@ val NUMERIC_ENDENL_KEYBOARD =
                             KeyAction.CommitText("4"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("{"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("%"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("["),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("("),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("{")),
+                    topRight = KeyC(KeyAction.CommitText("%")),
+                    bottomLeft = KeyC(KeyAction.CommitText("[")),
+                    left = KeyC(KeyAction.CommitText("(")),
                 ),
                 KeyItemC(
                     center =
@@ -118,22 +70,10 @@ val NUMERIC_ENDENL_KEYBOARD =
                             KeyAction.CommitText("6"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("|"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("}"),
-                        ),
-                    right =
-                        KeyC(
-                            KeyAction.CommitText(")"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("]"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("|")),
+                    topRight = KeyC(KeyAction.CommitText("}")),
+                    right = KeyC(KeyAction.CommitText(")")),
+                    bottomRight = KeyC(KeyAction.CommitText("]")),
                 ),
                 ABC_KEY_ITEM,
             ),
@@ -144,22 +84,10 @@ val NUMERIC_ENDENL_KEYBOARD =
                             KeyAction.CommitText("7"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("~"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText(":"),
-                        ),
-                    bottom =
-                        KeyC(
-                            KeyAction.CommitText(";"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("<"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("~")),
+                    bottomRight = KeyC(KeyAction.CommitText(":")),
+                    bottom = KeyC(KeyAction.CommitText(";")),
+                    bottomLeft = KeyC(KeyAction.CommitText("<")),
                 ),
                 KeyItemC(
                     center =
@@ -167,34 +95,13 @@ val NUMERIC_ENDENL_KEYBOARD =
                             KeyAction.CommitText("8"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("\""),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("'"),
-                        ),
-                    right =
-                        KeyC(
-                            KeyAction.CommitText("_"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("-"),
-                        ),
-                    bottom =
-                        KeyC(
-                            KeyAction.CommitText("."),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText(","),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("*"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("\"")),
+                    topRight = KeyC(KeyAction.CommitText("'")),
+                    right = KeyC(KeyAction.CommitText("_")),
+                    bottomRight = KeyC(KeyAction.CommitText("-")),
+                    bottom = KeyC(KeyAction.CommitText(".")),
+                    bottomLeft = KeyC(KeyAction.CommitText(",")),
+                    left = KeyC(KeyAction.CommitText("*")),
                 ),
                 KeyItemC(
                     center =
@@ -202,26 +109,11 @@ val NUMERIC_ENDENL_KEYBOARD =
                             KeyAction.CommitText("9"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("°"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText(">"),
-                        ),
-                    bottom =
-                        KeyC(
-                            KeyAction.CommitText("!"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("?"),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("#"),
-                        ),
+                    topRight = KeyC(KeyAction.CommitText("°")),
+                    bottomRight = KeyC(KeyAction.CommitText(">")),
+                    bottom = KeyC(KeyAction.CommitText("!")),
+                    bottomLeft = KeyC(KeyAction.CommitText("?")),
+                    left = KeyC(KeyAction.CommitText("#")),
                 ),
                 BACKSPACE_KEY_ITEM,
             ),

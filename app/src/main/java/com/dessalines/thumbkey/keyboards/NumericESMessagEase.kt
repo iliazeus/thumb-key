@@ -29,10 +29,7 @@ val KB_ES_MESSAGEASE_NUMERIC =
                             size = FontSizeVariant.LARGE,
                         ),
                     right = KeyC(display = KeyDisplay.TextDisplay("-"), action = KeyAction.CommitText("-")),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText(KB_ES_MESSAGEASE_CURRENCY_SYMBOL),
-                        ),
+                    bottomLeft = KeyC(KeyAction.CommitText(KB_ES_MESSAGEASE_CURRENCY_SYMBOL)),
                 ),
                 KeyItemC(
                     center =
@@ -44,14 +41,8 @@ val KB_ES_MESSAGEASE_NUMERIC =
                     top = KeyC(display = KeyDisplay.TextDisplay("^"), action = KeyAction.CommitText("^")),
                     topRight = KeyC(display = KeyDisplay.TextDisplay("´"), action = KeyAction.CommitText("´")),
                     right = KeyC(display = KeyDisplay.TextDisplay("!"), action = KeyAction.CommitText("!")),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("\\"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("/"),
-                        ),
+                    bottomRight = KeyC(KeyAction.CommitText("\\")),
+                    bottomLeft = KeyC(KeyAction.CommitText("/")),
                     left = KeyC(display = KeyDisplay.TextDisplay("+"), action = KeyAction.CommitText("+")),
                 ),
                 KeyItemC(

@@ -22,17 +22,13 @@ val FRENCH_NUMERIC_KEYBOARD =
                         buildMap {
                             put(
                                 SwipeDirection.BOTTOM_LEFT,
-                                KeyC(
-                                    KeyAction.CommitText("$"),
-                                ),
+                                KeyC(KeyAction.CommitText("$")),
                             )
                             getLocalCurrency()?.let {
                                 if (it !in setOf("$", "£", "€")) {
                                     put(
                                         SwipeDirection.BOTTOM_RIGHT,
-                                        KeyC(
-                                            KeyAction.CommitText(it),
-                                        ),
+                                        KeyC(KeyAction.CommitText(it)),
                                     )
                                 }
                             }
@@ -44,34 +40,13 @@ val FRENCH_NUMERIC_KEYBOARD =
                             KeyAction.CommitText("2"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("`"),
-                        ),
-                    top =
-                        KeyC(
-                            KeyAction.CommitText("^"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("´"),
-                        ),
-                    right =
-                        KeyC(
-                            KeyAction.CommitText("!"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("\\"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("/"),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("+"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("`")),
+                    top = KeyC(KeyAction.CommitText("^")),
+                    topRight = KeyC(KeyAction.CommitText("´")),
+                    right = KeyC(KeyAction.CommitText("!")),
+                    bottomRight = KeyC(KeyAction.CommitText("\\")),
+                    bottomLeft = KeyC(KeyAction.CommitText("/")),
+                    left = KeyC(KeyAction.CommitText("+")),
                 ),
                 KeyItemC(
                     center =
@@ -79,22 +54,10 @@ val FRENCH_NUMERIC_KEYBOARD =
                             KeyAction.CommitText("3"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("?"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("€"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("£"),
-                        ),
-                    bottom =
-                        KeyC(
-                            KeyAction.CommitText("="),
-                        ),
+                    left = KeyC(KeyAction.CommitText("?")),
+                    bottomRight = KeyC(KeyAction.CommitText("€")),
+                    bottomLeft = KeyC(KeyAction.CommitText("£")),
+                    bottom = KeyC(KeyAction.CommitText("=")),
                 ),
                 EMOJI_KEY_ITEM,
             ),
@@ -105,26 +68,11 @@ val FRENCH_NUMERIC_KEYBOARD =
                             KeyAction.CommitText("4"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("{"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("%"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("_"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("["),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("("),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("{")),
+                    topRight = KeyC(KeyAction.CommitText("%")),
+                    bottomRight = KeyC(KeyAction.CommitText("_")),
+                    bottomLeft = KeyC(KeyAction.CommitText("[")),
+                    left = KeyC(KeyAction.CommitText("(")),
                 ),
                 KeyItemC(
                     center =
@@ -139,26 +87,11 @@ val FRENCH_NUMERIC_KEYBOARD =
                             KeyAction.CommitText("6"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("|"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("}"),
-                        ),
-                    right =
-                        KeyC(
-                            KeyAction.CommitText(")"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("]"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("@"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("|")),
+                    topRight = KeyC(KeyAction.CommitText("}")),
+                    right = KeyC(KeyAction.CommitText(")")),
+                    bottomRight = KeyC(KeyAction.CommitText("]")),
+                    bottomLeft = KeyC(KeyAction.CommitText("@")),
                 ),
                 ABC_KEY_ITEM,
             ),
@@ -169,18 +102,9 @@ val FRENCH_NUMERIC_KEYBOARD =
                             KeyAction.CommitText("7"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("~"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText(":"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("<"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("~")),
+                    bottomRight = KeyC(KeyAction.CommitText(":")),
+                    bottomLeft = KeyC(KeyAction.CommitText("<")),
                 ),
                 KeyItemC(
                     center =
@@ -188,30 +112,12 @@ val FRENCH_NUMERIC_KEYBOARD =
                             KeyAction.CommitText("8"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("\""),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("'"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("-"),
-                        ),
-                    bottom =
-                        KeyC(
-                            KeyAction.CommitText("."),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("*"),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText(","),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("\"")),
+                    topRight = KeyC(KeyAction.CommitText("'")),
+                    bottomRight = KeyC(KeyAction.CommitText("-")),
+                    bottom = KeyC(KeyAction.CommitText(".")),
+                    bottomLeft = KeyC(KeyAction.CommitText("*")),
+                    left = KeyC(KeyAction.CommitText(",")),
                 ),
                 KeyItemC(
                     center =
@@ -219,26 +125,11 @@ val FRENCH_NUMERIC_KEYBOARD =
                             KeyAction.CommitText("9"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    top =
-                        KeyC(
-                            KeyAction.CommitText("&"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("°"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText(">"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText(";"),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("#"),
-                        ),
+                    top = KeyC(KeyAction.CommitText("&")),
+                    topRight = KeyC(KeyAction.CommitText("°")),
+                    bottomRight = KeyC(KeyAction.CommitText(">")),
+                    bottomLeft = KeyC(KeyAction.CommitText(";")),
+                    left = KeyC(KeyAction.CommitText("#")),
                 ),
                 BACKSPACE_KEY_ITEM,
             ),

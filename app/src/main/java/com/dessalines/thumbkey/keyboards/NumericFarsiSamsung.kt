@@ -22,14 +22,8 @@ val FARSI_NUMERIC_SAMSUNG_KEYBOARD =
                             display = KeyDisplay.TextDisplay("ـّ"),
                             action = KeyAction.CommitText("ّ"),
                         ),
-                    bottom =
-                        KeyC(
-                            KeyAction.CommitText("٫"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("﷼"),
-                        ),
+                    bottom = KeyC(KeyAction.CommitText("٫")),
+                    bottomLeft = KeyC(KeyAction.CommitText("﷼")),
                 ),
                 KeyItemC(
                     center =
@@ -37,34 +31,13 @@ val FARSI_NUMERIC_SAMSUNG_KEYBOARD =
                             KeyAction.CommitText("۲"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("`"),
-                        ),
-                    top =
-                        KeyC(
-                            KeyAction.CommitText("^"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("´"),
-                        ),
-                    right =
-                        KeyC(
-                            KeyAction.CommitText("!"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("\\"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("/"),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("+"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("`")),
+                    top = KeyC(KeyAction.CommitText("^")),
+                    topRight = KeyC(KeyAction.CommitText("´")),
+                    right = KeyC(KeyAction.CommitText("!")),
+                    bottomRight = KeyC(KeyAction.CommitText("\\")),
+                    bottomLeft = KeyC(KeyAction.CommitText("/")),
+                    left = KeyC(KeyAction.CommitText("+")),
                 ),
                 KeyItemC(
                     center =
@@ -72,18 +45,9 @@ val FARSI_NUMERIC_SAMSUNG_KEYBOARD =
                             KeyAction.CommitText("۳"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("؟"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("$"),
-                        ),
-                    bottom =
-                        KeyC(
-                            KeyAction.CommitText("="),
-                        ),
+                    left = KeyC(KeyAction.CommitText("؟")),
+                    bottomRight = KeyC(KeyAction.CommitText("$")),
+                    bottom = KeyC(KeyAction.CommitText("=")),
                 ),
                 EMOJI_KEY_ITEM,
             ),
@@ -94,26 +58,11 @@ val FARSI_NUMERIC_SAMSUNG_KEYBOARD =
                             KeyAction.CommitText("۴"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("{"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("٪"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("_"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("["),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("("),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("{")),
+                    topRight = KeyC(KeyAction.CommitText("٪")),
+                    bottomRight = KeyC(KeyAction.CommitText("_")),
+                    bottomLeft = KeyC(KeyAction.CommitText("[")),
+                    left = KeyC(KeyAction.CommitText("(")),
                 ),
                 KeyItemC(
                     center =
@@ -143,26 +92,11 @@ val FARSI_NUMERIC_SAMSUNG_KEYBOARD =
                             KeyAction.CommitText("۶"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("|"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("}"),
-                        ),
-                    right =
-                        KeyC(
-                            KeyAction.CommitText(")"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("]"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("@"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("|")),
+                    topRight = KeyC(KeyAction.CommitText("}")),
+                    right = KeyC(KeyAction.CommitText(")")),
+                    bottomRight = KeyC(KeyAction.CommitText("]")),
+                    bottomLeft = KeyC(KeyAction.CommitText("@")),
                 ),
                 ABC_KEY_ITEM,
             ),
@@ -173,27 +107,15 @@ val FARSI_NUMERIC_SAMSUNG_KEYBOARD =
                             KeyAction.CommitText("۷"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("~"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("~")),
                     topRight =
                         KeyC(
                             display = KeyDisplay.TextDisplay("ـً"),
                             action = KeyAction.CommitText("ً"),
                         ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText(":"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("<"),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("«"),
-                        ),
+                    bottomRight = KeyC(KeyAction.CommitText(":")),
+                    bottomLeft = KeyC(KeyAction.CommitText("<")),
+                    left = KeyC(KeyAction.CommitText("«")),
                 ),
                 KeyItemC(
                     center =
@@ -201,30 +123,12 @@ val FARSI_NUMERIC_SAMSUNG_KEYBOARD =
                             KeyAction.CommitText("۸"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    topLeft =
-                        KeyC(
-                            KeyAction.CommitText("\""),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("'"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText("-"),
-                        ),
-                    bottom =
-                        KeyC(
-                            KeyAction.CommitText("."),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("*"),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("،"),
-                        ),
+                    topLeft = KeyC(KeyAction.CommitText("\"")),
+                    topRight = KeyC(KeyAction.CommitText("'")),
+                    bottomRight = KeyC(KeyAction.CommitText("-")),
+                    bottom = KeyC(KeyAction.CommitText(".")),
+                    bottomLeft = KeyC(KeyAction.CommitText("*")),
+                    left = KeyC(KeyAction.CommitText("،")),
                 ),
                 KeyItemC(
                     center =
@@ -232,30 +136,12 @@ val FARSI_NUMERIC_SAMSUNG_KEYBOARD =
                             KeyAction.CommitText("۹"),
                             size = FontSizeVariant.LARGE,
                         ),
-                    top =
-                        KeyC(
-                            KeyAction.CommitText("&"),
-                        ),
-                    topRight =
-                        KeyC(
-                            KeyAction.CommitText("°"),
-                        ),
-                    right =
-                        KeyC(
-                            KeyAction.CommitText("»"),
-                        ),
-                    bottomRight =
-                        KeyC(
-                            KeyAction.CommitText(">"),
-                        ),
-                    bottomLeft =
-                        KeyC(
-                            KeyAction.CommitText("؛"),
-                        ),
-                    left =
-                        KeyC(
-                            KeyAction.CommitText("#"),
-                        ),
+                    top = KeyC(KeyAction.CommitText("&")),
+                    topRight = KeyC(KeyAction.CommitText("°")),
+                    right = KeyC(KeyAction.CommitText("»")),
+                    bottomRight = KeyC(KeyAction.CommitText(">")),
+                    bottomLeft = KeyC(KeyAction.CommitText("؛")),
+                    left = KeyC(KeyAction.CommitText("#")),
                 ),
                 BACKSPACE_KEY_ITEM,
             ),
