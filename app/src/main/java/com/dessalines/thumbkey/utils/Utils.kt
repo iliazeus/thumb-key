@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.res.Resources
+import android.icu.text.Normalizer2
 import android.net.Uri
 import android.os.Build
 import android.os.Handler
@@ -395,223 +396,93 @@ fun performKeyAction(
             val text = action.text
             val textBefore = ime.currentInputConnection.getTextBeforeCursor(1, 0)
 
+            // Unicode combining characters
+            // these use their Unicode name, with `COMBINING` removed:
+            val DIAERESIS = '\u0308'
+            val ACUTE_ACCENT = '\u0301'
+            val GRAVE_ACCENT = '\u0300'
+            val CIRCUMFLEX_ACCENT = '\u0302'
+            val TILDE = '\u0303'
+            val RING_ABOVE = '\u030A'
+            val BREVE = '\u0306'
+            val HOOK_ABOVE = '\u0309'
+            val DOT_BELOW = '\u0323'
+            val CARON = '\u030C'
+
+            // for these ones the actual Unicode name is way too unwieldy:
+            val DAKUTEN = '\u3099'
+            val HANDAKUTEN = '\u309A'
+
+            fun tryCombine(
+                char: Char,
+                text: CharSequence?,
+            ): CharSequence? {
+                if (text == null) return null
+                val normalizer = Normalizer2.getNFCInstance()
+                val combined = normalizer.normalize(char.toString() + text.first())
+                if (combined.length == text.length) {
+                    return combined
+                } else {
+                    return text
+                }
+            }
+
+            // the general principle for these rules
+            // is to rely on tryCombine() as much as possible,
+            // only using explicit mappings for exceptional cases
+
+            // there may be when() expressions with only a single else clause
+            // there are intentionally here to simplify diffs
+            // in case more rules are added later
+
             val textNew =
                 when (text) {
                     "\"" ->
                         when (textBefore) {
-                            "a" -> "ä"
-                            "A" -> "Ä"
-                            "e" -> "ë"
-                            "E" -> "Ë"
-                            "h" -> "ḧ"
-                            "H" -> "Ḧ"
-                            "i" -> "ï"
-                            "I" -> "Ï"
-                            "o" -> "ö"
-                            "O" -> "Ö"
-                            "t" -> "ẗ"
-                            "u" -> "ü"
-                            "U" -> "Ü"
-                            "w" -> "ẅ"
-                            "W" -> "Ẅ"
-                            "x" -> "ẍ"
-                            "X" -> "Ẍ"
-                            "y" -> "ÿ"
-                            "Y" -> "Ÿ"
                             " " -> "\""
                             "'" -> "\""
-                            else -> textBefore
+                            else -> tryCombine(DIAERESIS, textBefore)
                         }
 
                     "'" ->
                         when (textBefore) {
-                            "a" -> "á"
-                            "A" -> "Á"
-                            "â" -> "ấ"
-                            "Â" -> "Ấ"
-                            "ă" -> "ắ"
-                            "Ă" -> "Ắ"
-                            "c" -> "ć"
-                            "C" -> "Ć"
-                            "e" -> "é"
-                            "E" -> "É"
-                            "ê" -> "ế"
-                            "Ê" -> "Ế"
-                            "g" -> "ǵ"
-                            "G" -> "Ǵ"
-                            "i" -> "í"
-                            "I" -> "Í"
-                            "j" -> "j́"
-                            "J" -> "J́"
-                            "k" -> "ḱ"
-                            "K" -> "Ḱ"
-                            "l" -> "ĺ"
-                            "L" -> "Ĺ"
-                            "m" -> "ḿ"
-                            "M" -> "Ḿ"
-                            "n" -> "ń"
-                            "N" -> "Ń"
-                            "o" -> "ó"
-                            "O" -> "Ó"
-                            "ô" -> "ố"
-                            "Ô" -> "Ố"
-                            "ơ" -> "ớ"
-                            "Ơ" -> "Ớ"
-                            "p" -> "ṕ"
-                            "P" -> "Ṕ"
-                            "r" -> "ŕ"
-                            "R" -> "Ŕ"
-                            "s" -> "ś"
-                            "S" -> "Ś"
-                            "u" -> "ú"
-                            "U" -> "Ú"
-                            "ư" -> "ứ"
-                            "Ư" -> "Ứ"
-                            "w" -> "ẃ"
-                            "W" -> "Ẃ"
-                            "y" -> "ý"
-                            "Y" -> "Ý"
-                            "z" -> "ź"
-                            "Z" -> "Ź"
                             "'" -> "”"
                             " " -> "'"
                             "\"" -> "'"
-                            else -> textBefore
+                            else -> tryCombine(ACUTE_ACCENT, textBefore)
                         }
 
                     "`" ->
                         when (textBefore) {
-                            "a" -> "à"
-                            "A" -> "À"
-                            "â" -> "ầ"
-                            "Â" -> "Ầ"
-                            "ă" -> "ằ"
-                            "Ă" -> "Ằ"
-                            "e" -> "è"
-                            "E" -> "È"
-                            "ê" -> "ề"
-                            "Ê" -> "Ề"
-                            "i" -> "ì"
-                            "I" -> "Ì"
-                            "n" -> "ǹ"
-                            "N" -> "Ǹ"
-                            "o" -> "ò"
-                            "O" -> "Ò"
-                            "ô" -> "ồ"
-                            "Ô" -> "Ồ"
-                            "ơ" -> "ờ"
-                            "Ờ" -> "Ờ"
-                            "u" -> "ù"
-                            "U" -> "Ù"
-                            "ư" -> "ừ"
-                            "Ư" -> "Ừ"
-                            "ü" -> "ǜ"
-                            "Ü" -> "Ǜ"
-                            "w" -> "ẁ"
-                            "W" -> "Ẁ"
-                            "y" -> "ỳ"
-                            "Y" -> "Ỳ"
                             "`" -> " “"
                             " " -> "`"
-                            else -> textBefore
+                            else -> tryCombine(GRAVE_ACCENT, textBefore)
                         }
 
                     "^" ->
                         when (textBefore) {
-                            "a" -> "â"
-                            "A" -> "Â"
-                            "c" -> "ĉ"
-                            "C" -> "Ĉ"
-                            "e" -> "ê"
-                            "E" -> "Ê"
-                            "g" -> "ĝ"
-                            "G" -> "Ĝ"
-                            "h" -> "ĥ"
-                            "H" -> "Ĥ"
-                            "i" -> "î"
-                            "I" -> "Î"
-                            "j" -> "ĵ"
-                            "J" -> "Ĵ"
-                            "o" -> "ô"
-                            "O" -> "Ô"
-                            "s" -> "ŝ"
-                            "S" -> "Ŝ"
-                            "u" -> "û"
-                            "U" -> "Û"
-                            "w" -> "ŵ"
-                            "W" -> "Ŵ"
-                            "y" -> "ŷ"
-                            "Y" -> "Ŷ"
-                            "z" -> "ẑ"
-                            "Z" -> "Ẑ"
                             " " -> "^"
-                            else -> textBefore
+                            else -> tryCombine(CIRCUMFLEX_ACCENT, textBefore)
                         }
 
                     "~" ->
                         when (textBefore) {
-                            "a" -> "ã"
-                            "A" -> "Ã"
-                            "â" -> "ẫ"
-                            "Â" -> "Ẫ"
-                            "ă" -> "ẵ"
-                            "Ă" -> "Ẵ"
-                            "c" -> "ç"
-                            "C" -> "Ç"
-                            "e" -> "ẽ"
-                            "E" -> "Ẽ"
-                            "ê" -> "ễ"
-                            "Ê" -> "Ễ"
-                            "i" -> "ĩ"
-                            "I" -> "Ĩ"
-                            "n" -> "ñ"
-                            "N" -> "Ñ"
-                            "o" -> "õ"
-                            "O" -> "Õ"
-                            "ô" -> "ỗ"
-                            "Ô" -> "Ỗ"
-                            "ơ" -> "ỡ"
-                            "Ơ" -> "Ỡ"
-                            "u" -> "ũ"
-                            "U" -> "Ũ"
-                            "ư" -> "ữ"
-                            "Ư" -> "Ữ"
-                            "v" -> "ṽ"
-                            "V" -> "Ṽ"
-                            "y" -> "ỹ"
-                            "Y" -> "Ỹ"
                             " " -> "~"
-                            else -> textBefore
+                            else -> tryCombine(TILDE, textBefore)
                         }
 
                     "°" ->
                         when (textBefore) {
-                            "a" -> "å"
-                            "A" -> "Å"
                             "o" -> "ø"
                             "O" -> "Ø"
-                            "u" -> "ů"
-                            "U" -> "Ů"
                             " " -> "°"
-                            else -> textBefore
+                            else -> tryCombine(RING_ABOVE, textBefore)
                         }
 
                     "˘" ->
                         when (textBefore) {
-                            "a" -> "ă"
-                            "A" -> "Ă"
-                            "e" -> "ĕ"
-                            "E" -> "Ĕ"
-                            "g" -> "ğ"
-                            "G" -> "Ğ"
-                            "i" -> "ĭ"
-                            "I" -> "Ĭ"
-                            "o" -> "ŏ"
-                            "O" -> "Ŏ"
-                            "u" -> "ŭ"
-                            "U" -> "Ŭ"
                             " " -> "˘"
-                            else -> textBefore
+                            else -> tryCombine(BREVE, textBefore)
                         }
 
                     "!" ->
@@ -646,18 +517,12 @@ fun performKeyAction(
 
                     "\$" ->
                         when (textBefore) {
-                            "c" -> "¢"
-                            "C" -> "¢"
-                            "e" -> "€"
-                            "E" -> "€"
-                            "f" -> "₣"
-                            "F" -> "₣"
-                            "l" -> "£"
-                            "L" -> "£"
-                            "y" -> "¥"
-                            "Y" -> "¥"
-                            "w" -> "₩"
-                            "W" -> "₩"
+                            "c", "C" -> "¢"
+                            "e", "E" -> "€"
+                            "f", "F" -> "₣"
+                            "l", "L" -> "£"
+                            "y", "Y" -> "¥"
+                            "w", "W" -> "₩"
                             " " -> "\$"
                             else -> textBefore
                         }
@@ -670,29 +535,9 @@ fun performKeyAction(
                             "え" -> "ぇ"
                             "お" -> "ぉ"
                             "ぅ" -> "ゔ"
-                            "か" -> "が"
-                            "き" -> "ぎ"
-                            "く" -> "ぐ"
-                            "け" -> "げ"
-                            "こ" -> "ご"
                             "が" -> "ゕ"
                             "げ" -> "ゖ"
-                            "さ" -> "ざ"
-                            "し" -> "じ"
-                            "す" -> "ず"
-                            "せ" -> "ぜ"
-                            "そ" -> "ぞ"
-                            "た" -> "だ"
-                            "ち" -> "ぢ"
-                            "つ" -> "づ"
-                            "て" -> "で"
-                            "と" -> "ど"
                             "づ" -> "っ"
-                            "は" -> "ば"
-                            "ひ" -> "び"
-                            "ふ" -> "ぶ"
-                            "へ" -> "べ"
-                            "ほ" -> "ぼ"
                             "ば" -> "ぱ"
                             "び" -> "ぴ"
                             "ぶ" -> "ぷ"
@@ -709,29 +554,9 @@ fun performKeyAction(
                             "エ" -> "ェ"
                             "オ" -> "ォ"
                             "ゥ" -> "ヴ"
-                            "カ" -> "ガ"
-                            "キ" -> "ギ"
-                            "ク" -> "グ"
-                            "ケ" -> "ゲ"
-                            "コ" -> "ゴ"
                             "ガ" -> "ヵ"
                             "ゲ" -> "ヶ"
-                            "サ" -> "ザ"
-                            "シ" -> "ジ"
-                            "ス" -> "ズ"
-                            "セ" -> "ゼ"
-                            "ソ" -> "ゾ"
-                            "タ" -> "ダ"
-                            "チ" -> "ヂ"
-                            "ツ" -> "ヅ"
-                            "テ" -> "デ"
-                            "ト" -> "ド"
                             "ヅ" -> "ッ"
-                            "ハ" -> "バ"
-                            "ヒ" -> "ビ"
-                            "フ" -> "ブ"
-                            "ヘ" -> "ベ"
-                            "ホ" -> "ボ"
                             "バ" -> "パ"
                             "ビ" -> "ピ"
                             "ブ" -> "プ"
@@ -746,85 +571,27 @@ fun performKeyAction(
                             "ヲ" -> "ヺ"
                             "ヷ" -> "ヮ"
                             "ヽ" -> "ヾ"
-                            else -> textBefore
+                            else -> tryCombine(DAKUTEN, textBefore)
                         }
 
                     "?" ->
                         when (textBefore) {
-                            "a" -> "ả"
-                            "A" -> "Ả"
-                            "â" -> "ẩ"
-                            "Â" -> "Ẩ"
-                            "ă" -> "ẳ"
-                            "Ă" -> "Ẳ"
-                            "o" -> "ỏ"
-                            "O" -> "Ỏ"
-                            "ô" -> "ổ"
-                            "Ô" -> "Ổ"
-                            "ơ" -> "ở"
-                            "Ơ" -> "Ở"
-                            "u" -> "ủ"
-                            "U" -> "Ủ"
-                            "ư" -> "ử"
-                            "Ư" -> "Ử"
-                            "i" -> "ỉ"
-                            "I" -> "Ỉ"
-                            "e" -> "ẻ"
-                            "E" -> "Ẻ"
-                            "ê" -> "ể"
-                            "Ê" -> "Ể"
-                            else -> textBefore
+                            else -> tryCombine(HOOK_ABOVE, textBefore)
                         }
 
                     "*" ->
                         when (textBefore) {
-                            "a" -> "ạ"
-                            "A" -> "Ạ"
-                            "â" -> "ậ"
-                            "Â" -> "Ậ"
-                            "ă" -> "ặ"
-                            "Ă" -> "Ặ"
-                            "o" -> "ọ"
-                            "O" -> "Ọ"
-                            "ô" -> "ộ"
-                            "Ô" -> "Ộ"
-                            "ơ" -> "ợ"
-                            "Ơ" -> "Ợ"
-                            "u" -> "ụ"
-                            "U" -> "Ụ"
-                            "ư" -> "ự"
-                            "Ư" -> "Ự"
-                            "i" -> "ị"
-                            "I" -> "Ị"
-                            "e" -> "ẹ"
-                            "E" -> "Ẹ"
-                            "ê" -> "ệ"
-                            "Ê" -> "Ệ"
-                            else -> textBefore
+                            else -> tryCombine(DOT_BELOW, textBefore)
                         }
 
                     "ˇ" ->
                         when (textBefore) {
-                            "c" -> "č"
                             "d" -> "ď"
-                            "e" -> "ě"
                             "l" -> "ľ"
-                            "n" -> "ň"
-                            "r" -> "ř"
-                            "s" -> "š"
                             "t" -> "ť"
-                            "z" -> "ž"
-                            "C" -> "Č"
-                            "D" -> "Ď"
-                            "E" -> "Ě"
                             "L" -> "Ľ"
-                            "N" -> "Ň"
-                            "R" -> "Ř"
-                            "S" -> "Š"
-                            "T" -> "Ť"
-                            "Z" -> "Ž"
                             " " -> "ˇ"
-                            else -> textBefore
+                            else -> tryCombine(CARON, textBefore)
                         }
 
                     else -> throw IllegalStateException("Invalid key modifier")
