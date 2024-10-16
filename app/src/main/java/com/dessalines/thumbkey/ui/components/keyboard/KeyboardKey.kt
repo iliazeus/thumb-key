@@ -61,7 +61,6 @@ import com.dessalines.thumbkey.utils.KeyboardPosition
 import com.dessalines.thumbkey.utils.Selection
 import com.dessalines.thumbkey.utils.SlideType
 import com.dessalines.thumbkey.utils.SwipeDirection
-import com.dessalines.thumbkey.utils.SwipeNWay
 import com.dessalines.thumbkey.utils.buildTapActions
 import com.dessalines.thumbkey.utils.circularDirection
 import com.dessalines.thumbkey.utils.colorVariantToColor
@@ -465,23 +464,31 @@ fun KeyboardKey(
                             }
 
                             if (action == null && dragReturnEnabled && maxOffsetBigEnough && finalOffsetSmallEnough) {
-                                val swipeDirection =
-                                    swipeDirection(maxOffset.x, maxOffset.y, minSwipeLength, key.swipeType)
-                                action = key.getSwipe(swipeDirection)?.swipeReturnAction
-                                    ?: oppositeCaseKey?.getSwipe(swipeDirection)?.action
+                                action =
+                                    key
+                                        .getSwipe(
+                                            swipeDirection(key, maxOffset.x, maxOffset.y, minSwipeLength),
+                                        )?.swipeReturnAction
+
+                                action =
+                                    action ?: oppositeCaseKey
+                                        ?.getSwipe(
+                                            swipeDirection(oppositeCaseKey, maxOffset.x, maxOffset.y, minSwipeLength),
+                                        )?.action
                             }
 
                             if (action == null && (!maxOffsetBigEnough || !finalOffsetSmallEnough)) {
-                                val swipeDirection =
-                                    swipeDirection(
-                                        offsetX,
-                                        offsetY,
-                                        minSwipeLength,
-                                        if (ghostKey == null) key.swipeType else SwipeNWay.EIGHT_WAY,
-                                    )
-                                action = key.getSwipe(swipeDirection)?.action ?: (
-                                    ghostKey?.getSwipe(swipeDirection)?.action
-                                )
+                                action =
+                                    key
+                                        .getSwipe(
+                                            swipeDirection(key, offsetX, offsetY, minSwipeLength),
+                                        )?.action
+
+                                action =
+                                    action ?: ghostKey
+                                        ?.getSwipe(
+                                            swipeDirection(ghostKey, offsetX, offsetY, minSwipeLength),
+                                        )?.action
                             }
 
                             if (action == null) {
