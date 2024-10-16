@@ -47,13 +47,14 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.text.NumberFormat
+import kotlin.enums.enumEntries
 import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.atan2
+import kotlin.math.hypot
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.pow
-import kotlin.math.sqrt
 
 const val TAG = "com.thumbkey"
 
@@ -257,69 +258,33 @@ fun keyboardPositionToAlignment(position: KeyboardPosition): Alignment =
         KeyboardPosition.Left -> Alignment.BottomStart
     }
 
-/**
- * If this doesn't meet the minimum swipe length, it returns null
- */
 fun swipeDirection(
+    key: KeyItemC,
     x: Float,
     y: Float,
     minSwipeLength: Int,
-    swipeType: SwipeNWay = SwipeNWay.EIGHT_WAY,
 ): SwipeDirection? {
-    val xD = x.toDouble()
-    val yD = y.toDouble()
+    val swipeLength = hypot(x, y)
+    if (swipeLength < minSwipeLength) return null
 
-    val swipeLength = sqrt(xD.pow(2) + yD.pow(2))
+    var bestDir: SwipeDirection? = null
+    var bestCosine: Float = 0.0f
 
-    if (swipeLength > minSwipeLength) {
-        val angleDir = (atan2(xD, yD) / Math.PI * 180)
-        val angle =
-            if (angleDir < 0) {
-                360 + angleDir
-            } else {
-                angleDir
-            }
+    for (dir in enumEntries<SwipeDirection>()) {
+        if (key.getSwipe(dir) == null) continue
 
-        when (swipeType) {
-            // 0 degrees = down, increasing counter-clockwise
-            SwipeNWay.EIGHT_WAY -> return when (angle) {
-                in 22.5..67.5 -> SwipeDirection.BOTTOM_RIGHT
-                in 67.5..112.5 -> SwipeDirection.RIGHT
-                in 112.5..157.5 -> SwipeDirection.TOP_RIGHT
-                in 157.5..202.5 -> SwipeDirection.TOP
-                in 202.5..247.5 -> SwipeDirection.TOP_LEFT
-                in 247.5..292.5 -> SwipeDirection.LEFT
-                in 292.5..337.5 -> SwipeDirection.BOTTOM_LEFT
-                else -> SwipeDirection.BOTTOM
-            }
+        var dirVec = dir.vector()
+        val dotProduct = dirVec.x * x + dirVec.y * y
+        val cosine = dotProduct / (swipeLength * hypot(dirVec.x, dirVec.y))
+        if (cosine <= 0) continue
 
-            SwipeNWay.FOUR_WAY_CROSS -> return when (angle) {
-                in 45.0..135.0 -> SwipeDirection.RIGHT
-                in 135.0..225.0 -> SwipeDirection.TOP
-                in 225.0..315.0 -> SwipeDirection.LEFT
-                else -> SwipeDirection.BOTTOM
-            }
-
-            SwipeNWay.FOUR_WAY_DIAGONAL -> return when (angle) {
-                in 0.0..90.0 -> SwipeDirection.BOTTOM_RIGHT
-                in 90.0..180.0 -> SwipeDirection.TOP_RIGHT
-                in 180.0..270.0 -> SwipeDirection.TOP_LEFT
-                else -> SwipeDirection.BOTTOM_LEFT
-            }
-
-            SwipeNWay.TWO_WAY_HORIZONTAL -> return when (angle) {
-                in 0.0..180.0 -> SwipeDirection.RIGHT
-                else -> SwipeDirection.LEFT
-            }
-
-            SwipeNWay.TWO_WAY_VERTICAL -> return when (angle) {
-                in 90.0..270.0 -> SwipeDirection.TOP
-                else -> SwipeDirection.BOTTOM
-            }
+        if (cosine > bestCosine) {
+            bestDir = dir
+            bestCosine = cosine
         }
-    } else {
-        return null
     }
+
+    return bestDir
 }
 
 fun performKeyAction(
@@ -398,20 +363,20 @@ fun performKeyAction(
 
             // Unicode combining characters
             // these use their Unicode name, with `COMBINING` removed:
-            val DIAERESIS = '\u0308'
-            val ACUTE_ACCENT = '\u0301'
-            val GRAVE_ACCENT = '\u0300'
-            val CIRCUMFLEX_ACCENT = '\u0302'
-            val TILDE = '\u0303'
-            val RING_ABOVE = '\u030A'
-            val BREVE = '\u0306'
-            val HOOK_ABOVE = '\u0309'
-            val DOT_BELOW = '\u0323'
-            val CARON = '\u030C'
+            val diaeresis = '\u0308'
+            val acuteAccent = '\u0301'
+            val graveAccent = '\u0300'
+            val circumflexAccent = '\u0302'
+            val tilde = '\u0303'
+            val ringAbove = '\u030A'
+            val breve = '\u0306'
+            val hookAbove = '\u0309'
+            val dotBelow = '\u0323'
+            val caron = '\u030C'
 
             // for these ones the actual Unicode name is way too unwieldy:
-            val DAKUTEN = '\u3099'
-            val HANDAKUTEN = '\u309A'
+            val dakuten = '\u3099'
+            val handakuten = '\u309A'
 
             fun tryCombine(
                 char: Char,
@@ -441,7 +406,7 @@ fun performKeyAction(
                         when (textBefore) {
                             " " -> "\""
                             "'" -> "\""
-                            else -> tryCombine(DIAERESIS, textBefore)
+                            else -> tryCombine(diaeresis, textBefore)
                         }
 
                     "'" ->
@@ -449,26 +414,26 @@ fun performKeyAction(
                             "'" -> "”"
                             " " -> "'"
                             "\"" -> "'"
-                            else -> tryCombine(ACUTE_ACCENT, textBefore)
+                            else -> tryCombine(acuteAccent, textBefore)
                         }
 
                     "`" ->
                         when (textBefore) {
                             "`" -> " “"
                             " " -> "`"
-                            else -> tryCombine(GRAVE_ACCENT, textBefore)
+                            else -> tryCombine(graveAccent, textBefore)
                         }
 
                     "^" ->
                         when (textBefore) {
                             " " -> "^"
-                            else -> tryCombine(CIRCUMFLEX_ACCENT, textBefore)
+                            else -> tryCombine(circumflexAccent, textBefore)
                         }
 
                     "~" ->
                         when (textBefore) {
                             " " -> "~"
-                            else -> tryCombine(TILDE, textBefore)
+                            else -> tryCombine(tilde, textBefore)
                         }
 
                     "°" ->
@@ -476,13 +441,13 @@ fun performKeyAction(
                             "o" -> "ø"
                             "O" -> "Ø"
                             " " -> "°"
-                            else -> tryCombine(RING_ABOVE, textBefore)
+                            else -> tryCombine(ringAbove, textBefore)
                         }
 
                     "˘" ->
                         when (textBefore) {
                             " " -> "˘"
-                            else -> tryCombine(BREVE, textBefore)
+                            else -> tryCombine(breve, textBefore)
                         }
 
                     "!" ->
@@ -571,17 +536,17 @@ fun performKeyAction(
                             "ヲ" -> "ヺ"
                             "ヷ" -> "ヮ"
                             "ヽ" -> "ヾ"
-                            else -> tryCombine(DAKUTEN, textBefore)
+                            else -> tryCombine(dakuten, textBefore)
                         }
 
                     "?" ->
                         when (textBefore) {
-                            else -> tryCombine(HOOK_ABOVE, textBefore)
+                            else -> tryCombine(hookAbove, textBefore)
                         }
 
                     "*" ->
                         when (textBefore) {
-                            else -> tryCombine(DOT_BELOW, textBefore)
+                            else -> tryCombine(dotBelow, textBefore)
                         }
 
                     "ˇ" ->
@@ -591,7 +556,7 @@ fun performKeyAction(
                             "t" -> "ť"
                             "L" -> "Ľ"
                             " " -> "ˇ"
-                            else -> tryCombine(CARON, textBefore)
+                            else -> tryCombine(caron, textBefore)
                         }
 
                     else -> throw IllegalStateException("Invalid key modifier")
