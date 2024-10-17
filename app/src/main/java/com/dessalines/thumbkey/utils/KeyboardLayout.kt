@@ -1,3 +1,5 @@
+@file:Suppress("ktlint:standard:no-wildcard-imports", "ktlint:standard:import-ordering")
+
 package com.dessalines.thumbkey.utils
 
 import com.dessalines.thumbkey.keyboards.KB_BG_MESSAGEASE_PHONETIC_SYMBOLS
@@ -155,9 +157,31 @@ import com.dessalines.thumbkey.keyboards.KB_UK_RU_MESSAGEASE_SYMBOLS
 import com.dessalines.thumbkey.keyboards.KB_UK_THUMBKEY
 import com.dessalines.thumbkey.keyboards.KB_VN_THUMBKEY
 
+// comment separating the import to not cause merge conflicts
+import com.dessalines.thumbkey.keyboards.fork.*
+
+// This declaration is source-code-compatible with the original one,
+// allowing for easier rebases and database compatibility
+class KeyboardLayout(
+    val ordinal: Int,
+    val keyboardDefinition: KeyboardDefinition,
+) {
+    companion object {
+        val entries =
+            KeyboardLayout_Original.entries.map {
+                when (it) {
+                    KeyboardLayout_Original.ENThumbKey -> KeyboardLayout(it.ordinal, FORK_KB_EN_THUMBKEY)
+                    KeyboardLayout_Original.RUThumbKey -> KeyboardLayout(it.ordinal, FORK_KB_RU_THUMBKEY)
+                    else -> KeyboardLayout(it.ordinal, KB_EN_THUMBKEY)
+                }
+            }
+    }
+}
+
 // Make sure new keyboards are added AT THE END of this list, and have a higher index.
 // DO NOT put them in the middle of the list!
-enum class KeyboardLayout(
+@Suppress("ktlint:standard:class-naming")
+enum class KeyboardLayout_Original(
     val keyboardDefinition: KeyboardDefinition,
 ) {
     ENThumbKey(KB_EN_THUMBKEY),
