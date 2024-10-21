@@ -9,7 +9,6 @@ import com.dessalines.thumbkey.utils.*
 import com.dessalines.thumbkey.utils.ColorVariant.*
 import com.dessalines.thumbkey.utils.FontSizeVariant.*
 import com.dessalines.thumbkey.utils.KeyAction.*
-import com.dessalines.thumbkey.utils.SwipeNWay.*
 
 val FORK_KB_RU_THUMBKEY: KeyboardDefinition =
     KeyboardDefinition(
@@ -55,7 +54,6 @@ private data class RuThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("с"), size = LARGE),
             longPress = CommitText("1"),
-            swipeType = EIGHT_WAY,
             topLeft = KeyC(sh("(", ":("), color = MUTED),
             right = KeyC(sh("щ")),
             bottomRight = KeyC(sh("й")),
@@ -66,7 +64,6 @@ private data class RuThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("р"), size = LARGE),
             longPress = CommitText("2"),
-            swipeType = TWO_WAY_VERTICAL,
             bottom = KeyC(sh("х")),
         )
 
@@ -74,7 +71,6 @@ private data class RuThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("а"), size = LARGE),
             longPress = CommitText("3"),
-            swipeType = FOUR_WAY_DIAGONAL,
             topRight = KeyC(sh(")", ":)"), color = MUTED),
             bottomLeft = KeyC(sh("ж")),
         )
@@ -83,7 +79,6 @@ private data class RuThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("н"), size = LARGE),
             longPress = CommitText("4"),
-            swipeType = FOUR_WAY_CROSS,
             right = KeyC(sh("м")),
             bottom = KeyC(sh("л")),
         )
@@ -106,7 +101,6 @@ private data class RuThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("е"), size = LARGE),
             longPress = CommitText("6"),
-            swipeType = FOUR_WAY_CROSS,
             left = KeyC(sh("ф")),
             top =
                 if (!shifted) {

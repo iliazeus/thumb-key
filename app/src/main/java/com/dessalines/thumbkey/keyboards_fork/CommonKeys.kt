@@ -9,12 +9,10 @@ import com.dessalines.thumbkey.utils.*
 import com.dessalines.thumbkey.utils.ColorVariant.*
 import com.dessalines.thumbkey.utils.FontSizeVariant.*
 import com.dessalines.thumbkey.utils.KeyAction.*
-import com.dessalines.thumbkey.utils.SwipeNWay.*
 
 fun specialActionKeyItem(center: KeyC) =
     KeyItemC(
         backgroundColor = SURFACE_VARIANT,
-        swipeType = FOUR_WAY_CROSS,
         center = center,
         top =
             KeyC(

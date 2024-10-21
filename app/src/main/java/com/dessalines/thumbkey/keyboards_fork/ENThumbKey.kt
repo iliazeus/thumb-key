@@ -9,7 +9,6 @@ import com.dessalines.thumbkey.utils.*
 import com.dessalines.thumbkey.utils.ColorVariant.*
 import com.dessalines.thumbkey.utils.FontSizeVariant.*
 import com.dessalines.thumbkey.utils.KeyAction.*
-import com.dessalines.thumbkey.utils.SwipeNWay.*
 
 val FORK_KB_EN_THUMBKEY: KeyboardDefinition =
     KeyboardDefinition(
@@ -55,7 +54,6 @@ private data class EnThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("s"), size = LARGE),
             longPress = CommitText("1"),
-            swipeType = FOUR_WAY_DIAGONAL,
             topLeft = KeyC(sh("(", ":("), color = MUTED),
             bottomRight = KeyC(sh("w")),
         )
@@ -64,7 +62,6 @@ private data class EnThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("r"), size = LARGE),
             longPress = CommitText("2"),
-            swipeType = TWO_WAY_VERTICAL,
             bottom = KeyC(sh("g")),
         )
 
@@ -72,7 +69,6 @@ private data class EnThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("o"), size = LARGE),
             longPress = CommitText("3"),
-            swipeType = FOUR_WAY_DIAGONAL,
             topRight = KeyC(sh(")", ":)"), color = MUTED),
             bottomLeft = KeyC(sh("u")),
         )
@@ -81,7 +77,6 @@ private data class EnThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("n"), size = LARGE),
             longPress = CommitText("4"),
-            swipeType = TWO_WAY_HORIZONTAL,
             right = KeyC(sh("m")),
         )
 
@@ -103,7 +98,6 @@ private data class EnThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("a"), size = LARGE),
             longPress = CommitText("6"),
-            swipeType = FOUR_WAY_CROSS,
             left = KeyC(sh("l")),
             top =
                 if (!shifted) {
@@ -142,7 +136,6 @@ private data class EnThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("t"), size = LARGE),
             longPress = CommitText("7"),
-            swipeType = FOUR_WAY_DIAGONAL,
             topRight = KeyC(sh("c")),
         )
 
@@ -164,7 +157,6 @@ private data class EnThumbKeyCtx(
         KeyItemC(
             center = KeyC(sh("e"), size = LARGE),
             longPress = CommitText("9"),
-            swipeType = FOUR_WAY_DIAGONAL,
             topLeft = KeyC(sh("d")),
         )
 
